@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Đăng Ký Học Viên</title>
+</head>
+<style>
+
+    p{
+        font-size: 20px;
+        width: 90%;
+        text-align: left;
+        background-color: aquamarine;
+        color: blue;
+        padding: 20px;
+        margin-left: 13px;
+    }
+
+    #khung{
+        border-bottom: 5px solid antiquewhite;
+        border-top: 5px solid antiquewhite;
+        border-left: 5px solid antiquewhite;
+        border-right: 5px solid antiquewhite;
+        width: 600px;
+        margin-left: 400px;
+        background-color: bisque;
+    }
+
+    label{
+        color: blue;
+
+    }
+
+
+</style>
+
+
+<body>
+<form>
+    <div id="khung">
+        <p><b> ĐĂNG KÝ HỌC VIÊN </b></p>
+        <table>
+            <tr>
+                <td>
+                    <label for="txtName">Họ và Tên:</label>
+                </td>
+
+                <td>
+                    <input type="text" placeholder="Nhập tên" id="txtName" name="name">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="txtDate">Ngày sinh:</label></td>
+                <td><input type="text" placeholder="Nhập date" name="date" id="txtDate"></td>
+            </tr>
+
+            <tr>
+                <td><label>Giới tính:</label></td>
+                <td>
+                    <input type="radio" name="gender"> Nam
+                    <input type="radio" name="gender"> Nữ
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="txtAddress">Địa chỉ:</label></td>
+                <td>
+                    <textarea name="address" placeholder="Nhập địa chỉ" id="txtAddress"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Lớp:</label></td>
+                <td>
+                    <select name="class">
+                        <option> --Chọn lớp--</option>
+                        <option> C0522G1</option>
+                        <option> C0522G2</option>
+                        <option> C0522G3</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="txtEmail">Email:</label></td>
+                <td>
+                    <input type="email" name="email" placeholder="Nhập email" id="txtEmail">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="txtPhone">Điện thoại:</label></td>
+                <td>
+                    <input type="text" name="phone" placeholder="Nhập phone" id="txtPhone">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+<!--                   rỗng-->
+                </td>
+                <td>
+                    <input type="submit" value="Đăng Ký">
+                    <input type="reset" value="Nhập lại">
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+</body>
+</html>
