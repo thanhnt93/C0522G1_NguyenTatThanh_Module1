@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, kiểu dữ liệu, toán tử</title>
+</head>
+<body>
+<div style="border: 2px solid black; width: 500px">
+    <p style="margin-left: 10px"> <b>Bài 1:</b></p>
+    <label style="margin-left: 10px">Nhập điểm Lý:</label>
+    <input style="margin-left: 10px" type="number" id="Ly"> <br><br>
+    <label style="margin-left: 10px">Nhập điểm Hóa:</label>
+    <input style="margin-left: 10px" type="number" id="Hoa"> <br><br>
+    <label style="margin-left: 10px">Nhập điểm Sinh:</label>
+    <input style="margin-left: 10px" type="number" id="Sinh"> <br><br>
+
+    <input style="margin-left: 10px" type="button" value="Xác nhận" onclick="totaltb()">
+    <p style="margin-left: 10px" id="resurt"></p>
+</div> <br><br>
+
+<div style="border: 2px solid black; width: 500px">
+    <p style="margin-left: 10px" style="margin-left: 10px"> <b>Bài 2:</b></p>
+    <label style="margin-left: 10px">Nhập độ C: </label>
+    <input style="margin-left: 10px" type="number" id="doC">
+    <input style="margin-left: 10px" type="button" value="Xác nhận" onclick="nhietdoC()">
+    <p style="margin-left: 10px" id="resurtdoC"></p>
+</div> <br><br>
+
+<div style="border: 2px solid black; width: 500px">
+    <p style="margin-left: 10px"> <b>Bài 3:</b></p>
+    <label style="margin-left: 10px">Nhập bán kính R = </label>
+    <input style="margin-left: 10px" type="number" id="R">
+    <p style="margin-left: 10px">PI = 3.14</p>
+    <input style="margin-left: 10px" type="button" value="Xác nhận" onclick="dientich()">
+    <p style="margin-left: 10px" id="resurtS"></p>
+</div> <br><br>
+
+<div style="border: 2px solid black; width: 500px">
+    <p style="margin-left: 10px"> <b>Bài 4a:</b></p>
+    <label style="margin-left: 10px">Nhập đường kính d = </label>
+    <input style="margin-left: 10px" type="number" id="d">
+    <p style="margin-left: 10px">PI = 3.14</p>
+    <input style="margin-left: 10px" type="button" value="Xác nhận" onclick="chuvi()">
+    <p style="margin-left: 10px" id="resurtC"></p>
+</div> <br><br>
+
+<div style="border: 2px solid black; width: 500px">
+    <p style="margin-left: 10px"> <b>Bài 4b:</b></p>
+    <label  style="margin-left: 10px">Nhập bán kính r = </label>
+    <input style="margin-left: 10px" type="number" id="bankinh">
+    <p style="margin-left: 10px">PI = 3.14</p>
+    <input style="margin-left: 10px" type="button" value="Xác nhận" onclick="chuvib()">
+    <p style="margin-left: 10px" id="resurtCb"></p>
+</div>
+
+<script>
+    function nhietdoC() {
+    let C = document.getElementById('doC').value;
+    let F = parseInt(C) * 1.8 + 32;
+    document.getElementById('resurtdoC').innerText = C + ' độ C = ' + F + ' độ F'
+    }
+
+    function chuvib() {
+    let r = document.getElementById('bankinh').value;
+    let PI = 3.14;
+    let C = (parseInt(r) * 2) * PI;
+    document.getElementById('resurtCb').innerText = 'Chu vi hình tròn C = ' + C;
+    }
+
+    function chuvi() {
+    let d = document.getElementById('d').value;
+    let PI = 3.14;
+    let C = parseInt(d) * PI;
+    document.getElementById('resurtC').innerText = 'Chu vi hình tròn C = ' + C;
+    }
+
+    function totaltb() {
+    let Ly = document.getElementById('Ly').value;
+    let Hoa = document.getElementById('Hoa').value;
+    let Sinh = document.getElementById('Sinh').value;
+    let dtb = (parseInt(Ly) + parseInt(Hoa) + parseInt(Sinh)) / 3;
+    document.getElementById('resurt').innerText = 'Điểm trung bình 3 môn = ' + dtb;
+    }
+
+    function dientich() {
+    let R = document.getElementById('R').value;
+    let PI = 3.14;
+    let S = (parseInt(R) * parseInt(R) * PI);
+    document.getElementById('resurtS').innerText = 'Diện tích hình tròn S = ' + S;
+    }
+</script>
+</body>
+</html>
