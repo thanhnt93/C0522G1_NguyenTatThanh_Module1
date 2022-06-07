@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 1</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 240px; width: 600px">
+    <h3 style="margin-left: 20px">Tính giá cước điện thoại</h3>
+    <label style="margin-left: 20px">Nhập số phút hộ gia đình gọi trong 1 tháng: </label>
+    <input style="margin-left: 20px" type="number" id="minute"> <br><br>
+    <label style="margin-left: 20px">Cước phí 3300đ/1 phút</label>
+    <input style="margin-left: 20px" type="button" value="Kiểm tra" onclick="check()">
+    <p style="margin-left: 20px" id="result"></p>
+
+    <script>
+        function check() {
+            let minute = document.getElementById('minute').value;
+            let result = parseInt(minute) * 3300;
+            document.getElementById('result').innerHTML = 'Tổng cước phí trong 1 tháng là: ' + result + 'Đ';
+        }
+    </script>
+</div>
+</body>
+</html>

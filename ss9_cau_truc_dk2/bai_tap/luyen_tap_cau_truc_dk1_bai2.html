@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 1</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 200px; width: 380px">
+    <h3 style="margin-left: 20px">Kiểm tra điều kiện tuổi</h3>
+    <label style="margin-left: 20px">Nhập số tuổi: </label>
+    <input style="margin-left: 20px" type="number" id="age"> <br><br>
+    <input style="margin-left: 20px" type="button" value="Kiểm tra" onclick="check()">
+    <p style="margin-left: 20px" id="resu
+lt"></p>
+    <script>
+        function check() {
+            let age = document.getElementById('age').value;
+            if(parseInt(age) > 15){
+                document.getElementById('result').innerText = 'Bạn đủ điều kiện vào học lớp 10';
+            } else {
+                document.getElementById('result').innerText = 'Bạn không đủ điều kiện vào học lớp 10';
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số ngày/tháng</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 150px; width: 380px">
+    <h2 style="margin-left: 20px">Kiểm tra số ngày/1 tháng</h2>
+    <input style="margin-left: 20px" type="number" id="month">
+    <input style="margin-left: 20px" type="button" value="Tính số ngày" onclick="tinhDate()">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+
+    <script>
+        function tinhDate() {
+            let month = document.getElementById('month').value;
+            switch (parseInt(month)) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById("result").innerHTML = 'Tháng ' + month + ' có 31 ngày';
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("result").innerHTML = 'Tháng ' + month + ' có 30 ngày';
+                    break;
+                case 2:
+                    document.getElementById("result").innerHTML = 'Tháng ' + month + ' có 28 hoặc 29 ngày';
+                    break;
+                default:
+                    document.getElementById("result").innerHTML = 'Không có tháng ' + month + ', vui lòng nhập lại tháng.';
+            }
+        }
+    </script>
+</body>
+</html>

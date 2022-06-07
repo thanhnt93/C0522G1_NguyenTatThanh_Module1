@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 2</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 200px; width: 380px">
+    <h3 style="margin-left: 20px">Chuyển độ C sang độ F</h3>
+    <label style="margin-left: 20px">Nhập độ C = </label>
+    <input style="margin-left: 20px" type="number" id="doC"> <br><br>
+    <input style="margin-left: 20px" type="button" value="Kiểm tra" onclick="change()">
+    <p style="margin-left: 20px" id="doF"></p>
+</div>
+
+<script>
+    function change() {
+        let doC = document.getElementById('doC').value;
+        let doF = parseInt(doC) * 9 / 5 + 32;
+        document.getElementById('doF').innerText = doC + ' độ C = ' + doF + ' độ F';
+    }
+</script>
+</body>
+</html>
