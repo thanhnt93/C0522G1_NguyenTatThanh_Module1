@@ -5,7 +5,7 @@
     <title>Giải phương trình bậc II</title>
 </head>
 <body>
-<div style="border: 2px solid black; height: 320px; width: 600px">
+<div style="border: 2px solid black; height: 350px; width: 700px">
     <h3 style="margin-left: 20px">Giải phương trình bậc II</h3>
     <label style="margin-left: 20px">Nhập các tham số của phương trình ax2 + bx + c = 0 (a ≠ 0)</label> <br><br>
     <label style="margin-left: 20px">a = </label>
@@ -23,7 +23,7 @@
         let a = parseInt(document.getElementById('a').value);
         let b = parseInt(document.getElementById('b').value);
         let c = parseInt(document.getElementById('c').value);
-        let delta = b * 2 - 4 * a * c;
+        let delta = b * b - 4 * a * c;
         if(delta < 0){
             document.getElementById('result').innerText = 'Phương trình vô nghiệm.';
         } else if(delta === 0){

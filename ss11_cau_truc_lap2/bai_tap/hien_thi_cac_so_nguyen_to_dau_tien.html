@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị số nguyên tố</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 220px; width: 380px">
+    <h3 style="margin-left: 20px">Hiển thị số nguyên tô</h3>
+    <label style="margin-left: 20px">Nhập số nguyên N = </label>
+    <input style="margin-left: 20px" type="number" id="integer"> <br><br>
+    <input style="margin-left: 20px" type="button" value="Kiểm tra" onclick="checkNumber()">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+<script>
+    function checkNumber() {
+        let integer = parseInt(document.getElementById('integer').value);
+        let checkInteger = false;
+        for (let i = 2; i < integer; i++){
+            if(integer % i !== 0){
+                checkInteger = true;
+            } else {
+                checkInteger = false;
+                break;
+            }
+        }
+        if(checkInteger === true){
+            document.getElementById('result').innerText = integer + ' là số nguyên tố';
+        } else {
+            document.getElementById('result').innerText = integer + ' không phải là số nguyên tố';
+        }
+    }
+</script>
+</body>
+</html>
