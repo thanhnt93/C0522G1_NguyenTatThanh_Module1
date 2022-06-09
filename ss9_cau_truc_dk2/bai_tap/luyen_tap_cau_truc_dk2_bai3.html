@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình vuông</title>
+</head>
+<body>
+<body>
+<div style="border: 2px solid black; height: 200px; width: 380px">
+    <h3 style="margin-left: 20px">Tính diện tích hình vuông</h3>
+    <label style="margin-left: 20px">Nhập độ dài cạnh a = </label>
+    <input style="margin-left: 20px" type="number" id="edgeA"> <br><br>
+    <input style="margin-left: 20px" type="button" value="Kiểm tra" onclick="area()">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+
+<script>
+    function area() {
+        let edgeA = document.getElementById('edgeA').value;
+        let S = parseInt(edgeA) * parseInt(edgeA);
+        document.getElementById('result').innerText = 'Diện tích hình vuông S = ' + S;
+    }
+</script>
+</body>
+</html>

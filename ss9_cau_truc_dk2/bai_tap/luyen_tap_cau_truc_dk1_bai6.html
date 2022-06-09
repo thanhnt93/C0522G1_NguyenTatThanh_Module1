@@ -8,14 +8,14 @@
 <div style="border: 2px solid black; height: 240px; width: 380px">
     <h3 style="margin-left: 20px">Doanh thu doanh số bán hàng</h3>
     <label style="margin-left: 20px">Nhập số tiền doanh thu bán hàng trong tháng này: </label>
-    <input style="margin-left: 20px" type="number" id="doanhThu"> <br><br>
+    <input style="margin-left: 20px" type="number" id="revenue"> <br><br>
     <input style="margin-left: 20px" type="button" value="Kiểm tra" onclick="check()">
     <p style="margin-left: 20px" id="result"></p>
     <p style="margin-left: 20px" id="resultHh"></p>
 </div>
 <script>
     function check() {
-        let money = document.getElementById('doanhThu').value;
+        let money = document.getElementById('revenue').value;
         if(parseInt(money) >= 1000000){
             document.getElementById('result').innerText = 'Doanh số tháng này vượt 1 000 000 VNĐ. Bạn được hưởng thêm 20% hoa hồng.';
             document.getElementById('resultHh').innerText = 'Tiền hoa hồng: ' + money * 20/100;

@@ -16,7 +16,7 @@
         body{
             background-color: #90a094;
         }
-        #mayTinh{
+        #computer{
             width:320px;
             height:520px;
             background-color: #eaedef;
@@ -24,10 +24,10 @@
             border-radius: 5px;
         }
 
-        #ketQua{
+        #result{
             height: 120px;
         }
-        #ketQuaCu{
+        #oldResults{
             text-align: right;
             height:20px;
             margin:0 20px;
@@ -35,16 +35,16 @@
             font-size:15px;
             color:#919191;
         }
-        #xuatKetQua {
+        #outputResult {
             text-align: right;
             height:60px;
             margin: 10px 20px;
             font-size: 30px;
         }
-        #banPhim{
+        #keyboard{
             height: 400px;
         }
-        .heThong, .conSo, .trong {
+        .system, .numbers, .blank {
             width:50px;
             height:50px;
             margin: 15px;
@@ -54,16 +54,16 @@
             font-weight:bold;
             font-size:16px;
         }
-        .conSo, .trong{
+        .numbers, .blank{
             background-color: #eaedef;
         }
-        .heThong, .conSo{
-            cursor: pointer;
+        .system, .numbers{
+            curvaluer: pointer;
         }
-        .heThong:active, .conSo:active {
+        .system:active, .numbers:active {
             font-size: 13px;
         }
-        .heThong:focus, .conSo:focus, .trong:focus{
+        .system:focus, .numbers:focus, .blank:focus{
             outline: 0;
         }
         button:nth-child(4) {
@@ -93,139 +93,149 @@
     <h2 style="text-align: center">Basic Caculator</h2>
     <input style="margin-left: 20px" type="number" id="numberA">
     <input type="number" id="numberB"> <br><br>
-    <input style="margin-left: 18px" type="button" onclick="phepCong()" value="Addition(+)">
-    <input type="button" onclick="phepTru()" value="Subtraction(-)">
-    <input type="button" onclick="phepNhan()" value="Multiplication(X)">
-    <input type="button" onclick="phepChia()" value="Division(/)">
+    <input style="margin-left: 18px" type="button" onclick="addition()" value="Addition(+)">
+    <input type="button" onclick="subtraction()" value="Subtraction(-)">
+    <input type="button" onclick="multiplication()" value="Multiplication(X)">
+    <input type="button" onclick="division()" value="Division(/)">
     <p style="margin-left: 20px" id="resurt"></p>
 </div>
 
 <h2 style="text-align: center">Advanced Calculator</h2>
-<div id="mayTinh">
-    <div id="ketQua">
-        <div id="ketQuaCu">
-            <p id="giaTriCu"></p>
+<div id="computer">
+    <div id="result">
+        <div id="oldResults">
+            <p id="oldValue"></p>
         </div>
-        <div id="xuatKetQua">
-            <p id="giaTriXuat"></p>
+        <div id="outputResult">
+            <p id="exportValue"></p>
         </div>
     </div>
-    <div id="banPhim">
-        <button class="heThong" id="xoaTatCa">C</button>
-        <button class="heThong" id="xoaTungSo">CE</button>
-        <button class="heThong" id="%">%</button>
-        <button class="heThong" id="/">÷</button>
-        <button class="conSo" id="7">7</button>
-        <button class="conSo" id="8">8</button>
-        <button class="conSo" id="9">9</button>
-        <button class="heThong" id="*">×</button>
-        <button class="conSo" id="4">4</button>
-        <button class="conSo" id="5">5</button>
-        <button class="conSo" id="6">6</button>
-        <button class="heThong" id="-">-</button>
-        <button class="conSo" id="1">1</button>
-        <button class="conSo" id="2">2</button>
-        <button class="conSo" id="3">3</button>
-        <button class="heThong" id="+">+</button>
-        <button class="trong"></button>
-        <button class="conSo" id="0">0</button>
-        <button class="trong"></button>
-        <button class="heThong" id="=">=</button>
+    <div id="keyboard">
+        <button class="system" id="deleteAll">C</button>
+        <button class="system" id="deleteEachNumber">CE</button>
+        <button class="system" id="%">%</button>
+        <button class="system" id="/">÷</button>
+        <button class="numbers" id="7">7</button>
+        <button class="numbers" id="8">8</button>
+        <button class="numbers" id="9">9</button>
+        <button class="system" id="*">×</button>
+        <button class="numbers" id="4">4</button>
+        <button class="numbers" id="5">5</button>
+        <button class="numbers" id="6">6</button>
+        <button class="system" id="-">-</button>
+        <button class="numbers" id="1">1</button>
+        <button class="numbers" id="2">2</button>
+        <button class="numbers" id="3">3</button>
+        <button class="system" id="+">+</button>
+        <button class="blank"></button>
+        <button class="numbers" id="0">0</button>
+        <button class="blank"></button>
+        <button class="system" id="=">=</button>
     </div>
 </div>
 <script>
-    function phepCong() {
+    //cộng
+    function addition() {
         let numberA = document.getElementById('numberA').value;
         let numberB = document.getElementById('numberB').value;
         let addition = parseInt(numberA) + parseInt(numberB);
         document.getElementById('resurt').innerText = 'Kết quả = ' + addition;
-
-    }  function phepTru() {
+        //trừ
+    }  function subtraction() {
         let numberA = document.getElementById('numberA').value;
         let numberB = document.getElementById('numberB').value;
         let subtraction = parseInt(numberA) - parseInt(numberB);
         document.getElementById('resurt').innerText = 'Kết quả = ' + subtraction;
-
-    }  function phepNhan() {
+        //nhân
+    }  function multiplication() {
         let numberA = document.getElementById('numberA').value;
         let numberB = document.getElementById('numberB').value;
         let multiplication = parseInt(numberA) * parseInt(numberB);
         document.getElementById('resurt').innerText = 'Kết quả = ' + multiplication;
     }
-
-    function phepChia() {
+    //chia
+    function division() {
         let numberA = document.getElementById('numberA').value;
         let numberB = document.getElementById('numberB').value;
         let division = parseInt(numberA) / parseInt(numberB);
         document.getElementById('resurt').innerText = 'Kết quả = ' + division ;
     }
 
-    function layGiaTriCu(){
-        return document.getElementById("giaTriCu").innerText;
+    //lấy giá trị cũ
+    function getOldValue(){
+        return document.getElementById("oldValue").innerText;
     }
-    function inGiaTriCu(so) {
-        document.getElementById("giaTriCu").innerText = so;
+
+    //in giá trị cũ
+    function printOldValue(value) {
+        document.getElementById("oldValue").innerText = value;
     }
-    function layKetQua() {
-        return document.getElementById("giaTriXuat").innerText;
+
+    // lấy kết quả
+    function getResults() {
+        return document.getElementById("exportValue").innerText;
     }
-    function inKetQua(so) {
-        document.getElementById("giaTriXuat").innerText = so;
+
+    //in kết quả
+    function printResults(value) {
+        document.getElementById("exportValue").innerText = value;
     }
-    function dinhDangChuoi(so) {
-        var n = Number(so);
-        var giaTri = n.toLocaleString("en");
-        return giaTri;
+
+    //định dạng chuỗi
+    function stringFormat(value) {
+        var n = Number(value);
+        var value = n.toLocaleString("en");
+        return value;
     }
-    function xoaDinhDangChuoi(so) {
-        return Number(so.replace(/,/g, ''))
+    function removeStringFormatting(value) {
+        return Number(value.replace(/,/g, ''))
     }
-    var conSo = document.getElementsByClassName('conSo');
-    for(var i=0; i<conSo.length; i++) {
-        conSo[i].addEventListener('click', function() {
-            var ketQua = xoaDinhDangChuoi(layKetQua())
-            if(ketQua != NaN) {
-                ketQua = ketQua + this.id;
-                inKetQua(ketQua)
+    var numbers = document.getElementsByClassName('numbers');
+    for(var i=0; i<numbers.length; i++) {
+        numbers[i].addEventListener('click', function() {
+            var result = removeStringFormatting(getResults())
+            if(result != NaN) {
+                result = result + this.id;
+                printResults(result)
             }
         })
     }
-    function inKetQua(so) {
-        if(so=="") {
-            document.getElementById("giaTriXuat").innerText = so;
+    function printResults(value) {
+        if(value=="") {
+            document.getElementById("exportValue").innerText = value;
         } else {
-            document.getElementById("giaTriXuat").innerText = dinhDangChuoi(so);
+            document.getElementById("exportValue").innerText = stringFormat(value);
         }
     }
 
-    var heThong = document.getElementsByClassName('heThong');
-    for(var i=0; i < heThong.length; i++) {
-        heThong[i].addEventListener('click', function() {
-            if(this.id == "xoaTatCa") {
-                inKetQua("");
-                inGiaTriCu("");
+    var system = document.getElementsByClassName('system');
+    for(var i=0; i < system.length; i++) {
+        system[i].addEventListener('click', function() {
+            if(this.id == "deleteAll") {
+                printResults("");
+                printOldValue("");
             }
-            else if(this.id == "xoaTungSo") {
-                let ketQua = xoaDinhDangChuoi(layKetQua()).toString();
-                if(ketQua) {
-                    ketQua = ketQua.substr(0, ketQua.length -1)
-                    inKetQua(ketQua)
+            else if(this.id == "deleteEachNumber") {
+                let result = removeStringFormatting(getResults()).toString();		//Xóa định dạng chuỗi
+                if(result) {
+                    result = result.substr(0, result.length -1)
+                    printResults(result)
                 }
             }
             else {
-                var ketQua = layKetQua();
-                var ketQuaCu = layGiaTriCu();
-                if(ketQua != "" ) {
-                    ketQua = xoaDinhDangChuoi(ketQua);
-                    ketQuaCu =ketQuaCu + ketQua;
+                var result = getResults();
+                var oldResults = getOldValue();
+                if(result != "" ) {
+                    result = removeStringFormatting(result);
+                    oldResults = oldResults + result;
                     if(this.id == "=") {
-                        var ketQuaCuoi = eval(ketQuaCu);
-                        inKetQua(ketQuaCuoi)
-                        inGiaTriCu("")
+                        var oldResultvalue = eval(oldResults);
+                        printResults(oldResultvalue)
+                        printOldValue("")
                     } else {
-                        ketQuaCu = ketQuaCu + this.id;
-                        inGiaTriCu(ketQuaCu)
-                        inKetQua("")
+                        oldResults = oldResults + this.id;
+                        printOldValue(oldResults)
+                        printResults("")
                     }
                 }
             }

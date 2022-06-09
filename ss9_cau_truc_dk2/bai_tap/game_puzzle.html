@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+    <style>
+
+        .container {
+            margin: 20px;
+            padding: 3px;
+        }
+
+        .top {
+            position: absolute;
+            clip: rect(0, 800px, 200px, 0);
+        }
+
+        .center {
+            position: absolute;
+            clip: rect(201px, 800px, 400px, 0);
+        }
+
+        .bottom {
+            position: absolute;
+            clip: rect(401px, 800px, 600px, 0);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="imgA.jpg" class="top" alt="">
+</div>
+<div class="container">
+    <img src="imgB.jpg" class="center" alt="">
+</div>
+<div class="container">
+    <img src="imgC.jpg" class="bottom" alt="">
+</div>
+<script>
+    $('img').click(function () {
+        changeSource(this)
+    });
+
+    function changeSource(puzzleImage) {
+        let imageName = puzzleImage.getAttribute('src');
+        let arr = ["imgA.jpg", "imgB.jpg", "imgC.jpg"];
+        switch (imageName) {
+            case arr[0]:
+                puzzleImage.src = arr[1];
+                break;
+            case arr[1]:
+                puzzleImage.src = arr[2];
+                break;
+            case arr[2]:
+                puzzleImage.src = arr[0];
+                break;
+        }
+    }
+</script>
+</body>
+</html>

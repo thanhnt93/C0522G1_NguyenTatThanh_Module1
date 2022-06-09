@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích tam giác vuông</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 200px; width: 380px">
+    <h3 style="margin-left: 20px">Tính diện tích hình tam giác vuông</h3>
+    <label style="margin-left: 20px">Nhập độ dài cạnh a = </label>
+    <input style="margin-left: 20px" type="number" id="edgeA"> <br><br>
+    <label style="margin-left: 20px">Nhập độ dài cạnh b = </label>
+    <input style="margin-left: 20px" type="number" id="edgeB"> <br><br>
+    <input style="margin-left: 20px" type="button" value="Kiểm tra" onclick="area()">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+
+<script>
+    function area() {
+        let edgeA = document.getElementById('edgeA').value;
+        let edgeB = document.getElementById('edgeB').value;
+        let S = parseInt(edgeA) * parseInt(edgeB) / 2;
+        document.getElementById('result').innerText = 'Diện tích hình tam giác vuông S = ' + S;
+    }
+
+</script>
+</body>
+</html>

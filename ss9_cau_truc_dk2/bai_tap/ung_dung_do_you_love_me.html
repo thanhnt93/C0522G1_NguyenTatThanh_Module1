@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me</title>
+    <style>
+        #noAnswer {
+            transition: all 0.5s ease-in;
+            position: absolute;
+        }
+    </style>
+</head>
+<body style="background-color: darkgrey">
+
+    <h2 style="text-align: center">Do you love me?</h2>
+    <button style="margin-left: 47%" onclick="alert('<3')"></button>
+    <button style="margin-left: 20px" onmouseover="changePosition(this)" id="noAnswer">No</button>
+<script>
+    function changePosition(ThisButton) {
+        let screenWidth = window.innerWidth;
+        let screenHeight = window.innerHeight;
+        let x = Math.floor(Math.random() * screenWidth);
+        let y = Math.floor(Math.random() * screenWidth);
+        ThisButton.style.left = x + "px";
+        ThisButton.style.top = y + "px";
+    }
+</script>
+</body>
+</html>

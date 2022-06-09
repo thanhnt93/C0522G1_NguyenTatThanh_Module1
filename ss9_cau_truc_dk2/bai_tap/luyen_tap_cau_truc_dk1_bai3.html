@@ -8,20 +8,20 @@
 <div style="border: 2px solid black; height: 200px; width: 380px">
     <h3 style="margin-left: 20px">Kiểm tra số nguyên</h3>
     <label style="margin-left: 20px">Nhập số tuổi: </label>
-    <input style="margin-left: 20px" type="number" id="soNguyen"> <br><br>
+    <input style="margin-left: 20px" type="number" id="integer"> <br><br>
     <input style="margin-left: 20px" type="button" value="Kiểm tra" onclick="check()">
     <p style="margin-left: 20px" id="result"></p>
 </div>
 
 <script>
     function check() {
-        let soNguyen = document.getElementById('soNguyen').value;
-        if(parseInt(soNguyen) > 0){
-            document.getElementById('result').innerText = 'Số ' + soNguyen + ' > 0';
-        } else if (parseInt(soNguyen) === 0) {
-            document.getElementById('result').innerText = 'Số ' + soNguyen + ' = 0';
+        let integer = document.getElementById('integer').value;
+        if(parseInt(integer) > 0){
+            document.getElementById('result').innerText = 'Số ' + integer + ' > 0';
+        } else if (parseInt(integer) === 0) {
+            document.getElementById('result').innerText = 'Số ' + integer + ' = 0';
         } else {
-            document.getElementById('result').innerText = 'Số ' + soNguyen + ' < 0';
+            document.getElementById('result').innerText = 'Số ' + integer + ' < 0';
         }
     }
 </script>

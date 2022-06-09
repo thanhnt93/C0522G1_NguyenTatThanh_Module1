@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 260px; width: 380px">
+    <h3 style="margin-left: 20px">Tính giá điện</h3>
+    <label style="margin-left: 20px">Nhập sản lượng điện tiêu thụ: </label> <br><br>
+    <input style="margin-left: 20px" type="number" id="electron"> kWh <br><br>
+    <input style="margin-left: 20px" type="button" value="Kiểm tra" onclick="testElectron()">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+
+<script>
+    function testElectron() {
+        let electron = parseInt(document.getElementById('electron').value);
+        if(electron >= 401){
+            let electronLv6 = electron * 2587;
+            document.getElementById('result').innerText = 'Tổng tiền điện = ' + electronLv6 + ' VNĐ';
+        } else if (electron >= 301){
+            let electronLv5 = electron * 2503;
+            document.getElementById('result').innerText = 'Tổng tiền điện = ' + electronLv5 + ' VNĐ';
+        } else if (electron >= 201){
+            let electronLv4 = electron * 2242;
+            document.getElementById('result').innerText = 'Tổng tiền điện = ' + electronLv4 + ' VNĐ';
+        } else if (electron >= 101){
+            let electronLv3 = electron * 1786;
+            document.getElementById('result').innerText = 'Tổng tiền điện = ' + electronLv3 + ' VNĐ';
+        }  else if(electron >= 51){
+            let electronLv2 = electron * 1533;
+            document.getElementById('result').innerText = 'Tổng tiền điện = ' + electronLv2 + ' VNĐ';
+        } else {
+            let electronLv1 = electron * 1484;
+            document.getElementById('result').innerText = 'Tổng tiền điện = ' + electronLv1 + ' VNĐ';
+        }
+    }
+</script>
+</body>
+</html>

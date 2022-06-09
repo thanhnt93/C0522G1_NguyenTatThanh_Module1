@@ -16,25 +16,18 @@
     // }
 
 
-    let value = prompt('Type a number: ');
-    switch (parseInt(value)) {
-        case 1:
-        case 2:
-        case 3:
-        case 4:
-        case 5:
+    let value = parseInt(prompt('Type a number: '));
+    let inputA = value > 0;
+    let inputB = value < 0;
+    switch (true) {
+        case inputA:
             alert(1);
             break;
-        case -1:
-        case -2:
-        case -3:
-        case -4:
-        case -5:
+        case inputB:
             alert(-1);
             break;
-        case 0:
+        default:
             alert(0);
-            break;
     }
 </script>
 </body>

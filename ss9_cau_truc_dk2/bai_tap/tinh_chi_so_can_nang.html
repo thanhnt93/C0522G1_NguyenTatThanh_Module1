@@ -10,11 +10,11 @@
     <input type="number" id="kg"> <br><br>
     <label>Nhập chiều cao (m): </label>
     <input type="number" id="m">
-    <input type="button" value="Kiểm tra" onclick="kiemtra()">
+    <input type="button" value="Kiểm tra" onclick="test()">
     <p id="result"></p>
 
 <script>
-    function kiemtra() {
+    function test() {
         let kg = document.getElementById('kg').value;
         let m = document.getElementById('m').value;
         let bmi = parseInt(kg) / (parseInt(m) * parseInt(m));

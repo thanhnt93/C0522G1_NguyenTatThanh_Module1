@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc I</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 260px; width: 380px">
+    <h3 style="margin-left: 20px">Giải phương trình bậc I</h3>
+    <label style="margin-left: 20px">Nhập các tham số của phương trình ax + b = 0 </label> <br><br>
+    <label style="margin-left: 20px">a = </label>
+    <input style="margin-left: 20px" type="number" id="a"> <br><br>
+    <label style="margin-left: 20px">b = </label>
+    <input style="margin-left: 20px" type="number" id="b"> <br><br>
+    <input style="margin-left: 20px" type="button" value="Kết quả" onclick="equation()">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+<script>
+    function equation() {
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        if(parseInt(a) === 0 && parseInt(b) === 0){
+            document.getElementById('result').innerText = 'Phương trình có vô số nghiệm.';
+        } else if (parseInt(a) === 0 && b !== 0){
+            document.getElementById('result').innerText = 'Phương trình vô nghiệm.';
+        } else {
+            document.getElementById('result').innerText = 'Phương trình có nghiệm duy nhất x = ' + parseInt(-b) / parseInt(a);
+        }
+    }
+</script>
+
+</body>
+</html>

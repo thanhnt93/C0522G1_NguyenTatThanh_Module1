@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhâp cá nhân</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 260px; width: 380px">
+    <h3 style="margin-left: 20px">Tính thuế thu nhập cá nhân</h3>
+    <label style="margin-left: 20px">Nhập thu nhập cá nhân: </label> <br><br>
+    <input style="margin-left: 20px" type="number" id="earnings"> VNĐ <br><br>
+    <input style="margin-left: 20px" type="button" value="Kiểm tra" onclick="tax()">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+
+<script>
+    function tax() {
+        let earnings = parseInt(document.getElementById('earnings').value);
+        if(earnings >= 80000000){
+            let earningsLv7 = earnings * 35 / 100;
+            document.getElementById('result').innerText = 'Tổng số thuế phải trả: ' + earningsLv7 + ' VNĐ';
+        } else if (earnings >= 52000000){
+            let earningsLv6 = earnings * 30 / 100;
+            document.getElementById('result').innerText = 'Tổng số thuế phải trả: ' + earningsLv6 + ' VNĐ';
+        } else if (earnings >= 32000000){
+            let earningsLv5 = earnings * 25 / 100;
+            document.getElementById('result').innerText = 'Tổng số thuế phải trả: ' + earningsLv5 + ' VNĐ';
+        } else if (earnings > 18000000){
+            let earningsLv4 = earnings * 20 / 100;
+            document.getElementById('result').innerText = 'Tổng số thuế phải trả: ' + earningsLv4 + ' VNĐ';
+        } else if (earnings > 10000000){
+            let earningsLv3 = earnings * 15 / 100;
+            document.getElementById('result').innerText = 'Tổng số thuế phải trả: ' + earningsLv3 + ' VNĐ';
+        } else if (earnings > 5000000){
+            let earningsLv2 = earnings * 10 / 100;
+            document.getElementById('result').innerText = 'Tổng số thuế phải trả: ' + earningsLv2 + ' VNĐ';
+        } else {
+            let earningsLv1 = earnings * 5 / 100;
+            document.getElementById('result').innerText = 'Tổng số thuế phải trả: ' + earningsLv1 + ' VNĐ';
+        }
+    }
+</script>
+</body>
+</html>

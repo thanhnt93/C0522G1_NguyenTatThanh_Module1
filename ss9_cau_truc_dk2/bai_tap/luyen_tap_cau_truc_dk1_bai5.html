@@ -11,74 +11,74 @@
 </head>
 <body>
 <div style="border: 2px solid black; height: 500px; width: 600px">
-<table>
-    <h3 style="margin-left: 20px">Bảng điểm xếp học lực</h3>
-    <tr>
-        <td><label>Nhập điểm Toán: </label></td>
-        <td><input type="number" id="toan"></td>
-    </tr>
+    <table>
+        <h3 style="margin-left: 20px">Bảng điểm xếp học lực</h3>
+        <tr>
+            <td><label>Nhập điểm Toán: </label></td>
+            <td><input type="number" id="math"></td>
+        </tr>
 
-    <tr>
-        <td><label>Nhập điểm Lý: </label></td>
-        <td><input type="number" id="ly"></td>
-    </tr>
+        <tr>
+            <td><label>Nhập điểm Lý: </label></td>
+            <td><input type="number" id="physical"></td>
+        </tr>
 
-    <tr>
-        <td><label>Nhập điểm Hóa: </label></td>
-        <td><input type="number" id="hoa"></td>
-    </tr>
+        <tr>
+            <td><label>Nhập điểm Hóa: </label></td>
+            <td><input type="number" id="chemical"></td>
+        </tr>
 
-    <tr>
-        <td><label>Nhập điểm Sinh: </label></td>
-        <td><input type="number" id="sinh"></td>
-    </tr>
+        <tr>
+            <td><label>Nhập điểm born: </label></td>
+            <td><input type="number" id="born"></td>
+        </tr>
 
-    <tr>
-        <td><label>Nhập điểm Sử: </label></td>
-        <td><input type="number" id="su"></td>
-    </tr>
+        <tr>
+            <td><label>Nhập điểm Sử: </label></td>
+            <td><input type="number" id="history"></td>
+        </tr>
 
-    <tr>
-        <td><label>Nhập điểm Địa: </label></td>
-        <td><input type="number" id="dia"></td>
-    </tr>
+        <tr>
+            <td><label>Nhập điểm Địa: </label></td>
+            <td><input type="number" id="geography"></td>
+        </tr>
 
-    <tr>
-        <td><label>Nhập điểm thi giữa kỳ: </label></td>
-        <td><input type="number" id="giuaKy"></td>
-    </tr>
+        <tr>
+            <td><label>Nhập điểm thi giữa kỳ: </label></td>
+            <td><input type="number" id="midtermExam"></td>
+        </tr>
 
-    <tr>
-        <td><label>Nhập điểm thi cuối kỳ: </label></td>
-        <td><input type="number" id="cuoiKy"></td>
-    </tr>
-</table>
+        <tr>
+            <td><label>Nhập điểm thi cuối kỳ: </label></td>
+            <td><input type="number" id="finalTerm"></td>
+        </tr>
+    </table>
     <br>
     <input style="margin-left: 20px" type="button" value="Kiểm tra" onclick="check()">
     <p style="margin-left: 20px" id="result"></p>
 </div>
-    <script>
-        function check() {
-            let toan = document.getElementById('toan').value;
-            let ly = document.getElementById('ly').value;
-            let hoa = document.getElementById('hoa').value;
-            let sinh = document.getElementById('sinh').value;
-            let su = document.getElementById('su').value;
-            let dia = document.getElementById('dia').value;
-            let giuaKy = document.getElementById('giuaKy').value;
-            let cuoiKy = document.getElementById('cuoiKy').value;
-            let result = (parseInt(toan) + parseInt(ly) + parseInt(hoa) + parseInt(sinh) + parseInt(su) + parseInt(dia) + parseInt(giuaKy) + parseInt(cuoiKy)) / 8;
-            if(result >= 6.5){
-                document.getElementById('result').innerHTML = "Điểm trung bình môn: " + result + ". Học lực Giỏi. <img src = https://media.itsnicethat.com/original_images/giphy-2021-gifs-and-clips-animation-itsnicethat-02.gif width='100' height= '100'>"
-            } else if(result < 6.5 && result >= 5){
-                document.getElementById('result').innerHTML = "Điểm trung bình môn: " + result + ". Học lực Khá. <img src = https://toigingiuvedep.vn/wp-content/uploads/2022/04/anh-dong-de-thuong-3.gif width='100' height= '100'>"
-            } else if(result < 5 && result > 3.5){
-                document.getElementById('result').innerHTML = "Điểm trung bình môn: " + result + ". Học lực Trung Bình. <img src = https://media3.giphy.com/media/YRhT9PSJe4twXxTE0U/giphy.gif width='100' height= '100'>"
-            } else {
-                document.getElementById('result').innerHTML = "Điểm trung bình môn: " + result + ". Học lực Yếu ( Học lại ). <img src = https://1.bp.blogspot.com/-jXEp34a2EZw/X3RemQ_laMI/AAAAAAAEmlQ/kfO8GfdBszAWAoez6Nd_ipZ39V8b2j25gCLcBGAsYHQ/s498/b5742520caf94949743b79b80d4c82c7.gif height= '100'>"
-            }
+<script>
+    function check() {
+        let math = document.getElementById('math').value;
+        let physical = document.getElementById('physical').value;
+        let chemical = document.getElementById('chemical').value;
+        let born = document.getElementById('born').value;
+        let history = document.getElementById('history').value;
+        let geography = document.getElementById('geography').value;
+        let midtermExam = document.getElementById('midtermExam').value;
+        let finalTerm = document.getElementById('finalTerm').value;
+        let result = (parseInt(math) + parseInt(physical) + parseInt(chemical) + parseInt(born) + parseInt(history) + parseInt(geography) + parseInt(midtermExam) + parseInt(finalTerm)) / 8;
+        if(result >= 6.5){
+            document.getElementById('result').innerHTML = "Điểm trung bình môn: " + result + ". Học lực Giỏi. <img src = https://megeography.itsnicethat.com/original_images/giphy-2021-gifs-and-clips-animation-itsnicethat-02.gif width='100' height= '100'>"
+        } else if(result < 6.5 && result >= 5){
+            document.getElementById('result').innerHTML = "Điểm trung bình môn: " + result + ". Học lực Khá. <img src = https://toigingiuvedep.vn/wp-content/uploads/2022/04/anh-dong-de-thuong-3.gif width='100' height= '100'>"
+        } else if(result < 5 && result > 3.5){
+            document.getElementById('result').innerHTML = "Điểm trung bình môn: " + result + ". Học lực Trung Bình. <img src = https://megeography3.giphy.com/megeography/YRhT9PSJe4twXxTE0U/giphy.gif width='100' height= '100'>"
+        } else {
+            document.getElementById('result').innerHTML = "Điểm trung bình môn: " + result + ". Học lực Yếu ( Học lại ). <img src = https://1.bp.blogspot.com/-jXEp34a2EZw/X3RemQ_laMI/AAAAAAAEmlQ/kfO8GfdBszAWAoez6Nd_ipZ39V8b2j25gCLcBGAsYHQ/s498/b5742520caf94949743b79b80d4c82c7.gif height= '100'>"
         }
-    </script>
+    }
+</script>
 
 </body>
 </html>

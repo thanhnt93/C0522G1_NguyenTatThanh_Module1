@@ -10,7 +10,16 @@
     <label style="margin-left: 20px">Nhập mét (m) = </label>
     <input style="margin-left: 20px" type="number" id="m"> <br><br>
     <input style="margin-left: 20px" type="button" value="Kiểm tra" onclick="change()">
-    <p style="margin-left: 20px" id="doF"></p>
+    <p style="margin-left: 20px" id="resultFeet"></p>
 </div>
+
+<script>
+    function change() {
+        let m = document.getElementById('m').value;
+        let ft = parseInt(m) * 3.2808;
+        document.getElementById('resultFeet').innerText = m + ' m = ' + ft + ' ft.'
+    }
+
+</script>
 </body>
 </html>

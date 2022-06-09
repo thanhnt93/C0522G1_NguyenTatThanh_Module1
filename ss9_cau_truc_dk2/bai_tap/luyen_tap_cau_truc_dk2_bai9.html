@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra 3 cạnh tam giác</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 320px; width: 600px">
+    <h3 style="margin-left: 20px">Kiểm tra tam giác</h3>
+    <label style="margin-left: 20px">Nhập độ dài cạnh a = </label>
+    <input style="margin-left: 20px" type="number" id="edgeA"> <br><br>
+    <label style="margin-left: 20px">Nhập độ dài cạnh b = </label>
+    <input style="margin-left: 20px" type="number" id="edgeB"> <br><br>
+    <label style="margin-left: 20px">Nhập độ dài cạnh c = </label>
+    <input style="margin-left: 20px" type="number" id="edgeC"> <br><br>
+    <input style="margin-left: 20px" type="button" value="Kết quả" onclick="test()">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+
+<script>
+    function test() {
+        let edgeA = parseInt(document.getElementById('edgeA').value);
+        let edgeB = parseInt(document.getElementById('edgeB').value);
+        let edgeC = parseInt(document.getElementById('edgeC').value);
+        if((edgeA > 0 && edgeB > 0 && edgeC > 0) && edgeA + edgeB > edgeC && edgeB + edgeC > edgeA && edgeA + edgeC > edgeB){
+            document.getElementById('result').innerText = '3 cạnh trên là một tam giác';
+        } else {
+            document.getElementById('result').innerText = '3 cạnh trên không phải là một tam giác';
+        }
+    }
+</script>
+</body>
+</html>

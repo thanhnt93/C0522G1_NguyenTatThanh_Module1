@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi ngân hàng</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 360px; width: 460px">
+    <h3 style="margin-left: 20px">Tính lãi suất vay</h3>
+    <label style="margin-left: 20px">Nhập số tiền vay: </label>
+    <input style="margin-left: 20px" type="number" id="money"> VNĐ <br><br>
+    <label style="margin-left: 20px">Nhập số tháng vay: </label>
+    <input style="margin-left: 20px" type="number" id="month"> VNĐ <br><br>
+    <label style="margin-left: 20px">Nhập lãi suất: </label>
+    <input style="margin-left: 20px" type="number" id="interestRate"> % <br><br>
+    <input style="margin-left: 20px" type="button" value="Kiểm tra" onclick="test()">
+    <p style="margin-left: 20px" id="resultPrincipalMoney"></p>
+    <p style="margin-left: 20px" id="resultPay"></p>
+    <p style="margin-left: 20px" id="resultPayByMonth"></p>
+</div>
+
+<script>
+    function test() {
+        let money = parseInt(document.getElementById('money').value);
+        let month = parseInt(document.getElementById('month').value);
+        let interestRate = parseInt(document.getElementById('interestRate').value);
+        //tiền gốc hàng tháng
+        let principalMoney = money / interestRate;
+        //tiền lãi tháng đầu
+        let pay = (money * interestRate / 100) / month;
+        //tiền lãi tháng tiếp theo
+        let payByMonth = (money - principalMoney) * interestRate/100 / month;
+        document.getElementById('resultPrincipalMoney').innerText = 'Tiền gốc hàng tháng: = ' + principalMoney + ' VNĐ';
+        document.getElementById('resultPay').innerText = 'Tiền lãi tháng đầu: = ' + pay + ' VNĐ';
+        document.getElementById('resultPayByMonth').innerText = 'Tiền lãi tháng tiếp theo: = ' + payByMonth + ' VNĐ';
+    }
+</script>
+</body>
+</html>

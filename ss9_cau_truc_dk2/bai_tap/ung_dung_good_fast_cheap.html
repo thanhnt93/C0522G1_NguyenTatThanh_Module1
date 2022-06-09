@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Good-Fast-Cheap</title>
+    <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+<table style="border-spacing: 20px; background-color: #9aa097">
+    <tr>
+        <td>
+            <h2>Good</h2>
+        </td>
+        <td>
+            <label class="switch">
+                <input id ="good" type="checkbox" onclick="checkGood()">
+                <span style="background-color: green" class="slider round"></span>
+            </label>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <h2>Fast</h2>
+        </td>
+        <td>
+            <label class="switch">
+                <input id ="fast" type="checkbox" onclick="checkFast()">
+                <span style="background-color: #2196F3" class="slider round"></span>
+            </label>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <h2>Cheap</h2>
+        </td>
+        <td>
+            <label class="switch">
+                <input id ="cheap" type="checkbox" onclick="checkCheap()">
+                <span style="background-color: #d61b06" class="slider round"></span>
+            </label>
+        </td>
+    </tr>
+</table>
+<script>
+    let good = document.getElementById("good");
+    let fast = document.getElementById("fast");
+    let cheap = document.getElementById("cheap");
+
+    function checkGood() {
+        if (fast.checked && cheap.checked) {
+            cheap.checked = false;
+        }
+    }
+
+    function checkFast() {
+        if (cheap.checked && fast.checked) {
+            good.checked = false;
+        }
+
+    }
+
+    function checkCheap() {
+        if (good.checked && cheap.checked) {
+            fast.checked = false;
+        }
+    }
+</script>
+</body>
+
+</html>

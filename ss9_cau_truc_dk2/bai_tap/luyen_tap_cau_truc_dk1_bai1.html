@@ -15,17 +15,17 @@
     <p style="margin-left: 20px" id="result"></p>
 </div>
 
-    <script>
-        function check() {
-            let a = document.getElementById('numberA').value;
-            let b = document.getElementById('numberB').value;
-            if(parseInt(a) % parseInt(b) === 0){
-                document.getElementById('result').innerText = a + ' chia hết cho ' + b;
-            } else {
-                document.getElementById('result').innerText = a + ' không chia hết cho ' + b;
-            }
+<script>
+    function check() {
+        let numberA = document.getElementById('numberA').value;
+        let numberB = document.getElementById('numberB').value;
+        if (parseInt(numberA) % parseInt(numberB) === 0) {
+            document.getElementById('result').innerText = a + ' chia hết cho ' + b;
+        } else {
+            document.getElementById('result').innerText = a + ' không chia hết cho ' + b;
         }
+    }
 
-    </script>
+</script>
 </body>
 </html>

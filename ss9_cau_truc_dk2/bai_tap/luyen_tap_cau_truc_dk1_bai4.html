@@ -19,15 +19,15 @@
 
 <script>
     function check() {
-        let a = document.getElementById('numberA').value;
-        let b = document.getElementById('numberB').value;
-        let c = document.getElementById('numberC').value;
-        if (parseInt(a) > parseInt(b) && parseInt(a) > parseInt(c)){
-            document.getElementById('result').innerText = 'Giá trị lớn nhất trong 3 số = ' + a;
-        } else if(parseInt(b) > parseInt(a) && parseInt(b) > parseInt(c)){
-            document.getElementById('result').innerText = 'Giá trị lớn nhất trong 3 số = ' + b;
+        let numberA = document.getElementById('numberA').value;
+        let numberB = document.getElementById('numberB').value;
+        let numberC = document.getElementById('numberC').value;
+        if (parseInt(numberA) > parseInt(numberB) && parseInt(numberA) > parseInt(numberC)){
+            document.getElementById('result').innerText = 'Giá trị lớn nhất trong 3 số = ' + numberA;
+        } else if(parseInt(numberB) > parseInt(numberA) && parseInt(numberB) > parseInt(numberC)){
+            document.getElementById('result').innerText = 'Giá trị lớn nhất trong 3 số = ' + numberB;
         } else {
-            document.getElementById('result').innerText = 'Giá trị lớn nhất trong 3 số = ' + c;
+            document.getElementById('result').innerText = 'Giá trị lớn nhất trong 3 số = ' + numberC;
         }
     }
 </script>
