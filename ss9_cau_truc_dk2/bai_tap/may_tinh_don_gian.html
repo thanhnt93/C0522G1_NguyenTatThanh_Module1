@@ -39,21 +39,21 @@
 <body>
 <div class="container">
     <div class="row">
-        <input id="InputBox" type="text" class="form-control large-text" aria-label="Large">
+        <input id="inputBox" type="text" class="form-control large-text" aria-label="Large">
     </div>
     <!-- Row 1 -->
     <div class="row">
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('1')">1</button>
+            <button class="btn btn-primary" onclick="calcInput('1')">1</button>
         </div>
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('2')">2</button>
+            <button class="btn btn-primary" onclick="calcInput('2')">2</button>
         </div>
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('3')">3</button>
+            <button class="btn btn-primary" onclick="calcInput('3')">3</button>
         </div>
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('+')">+</button>
+            <button class="btn btn-primary" onclick="calcInput('+')">+</button>
         </div>
     </div>
     <!-- End Row 1 -->
@@ -61,16 +61,16 @@
     <!-- Row 2 -->
     <div class="row">
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('4')">4</button>
+            <button class="btn btn-primary" onclick="calcInput('4')">4</button>
         </div>
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('5')">5</button>
+            <button class="btn btn-primary" onclick="calcInput('5')">5</button>
         </div>
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('6')">6</button>
+            <button class="btn btn-primary" onclick="calcInput('6')">6</button>
         </div>
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('-')">-</button>
+            <button class="btn btn-primary" onclick="calcInput('-')">-</button>
         </div>
     </div>
     <!-- End Row 2 -->
@@ -78,16 +78,16 @@
     <!-- Row 3 -->
     <div class="row">
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('7')">7</button>
+            <button class="btn btn-primary" onclick="calcInput('7')">7</button>
         </div>
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('8')">8</button>
+            <button class="btn btn-primary" onclick="calcInput('8')">8</button>
         </div>
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('9')">9</button>
+            <button class="btn btn-primary" onclick="calcInput('9')">9</button>
         </div>
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('X')">X</button>
+            <button class="btn btn-primary" onclick="calcInput('X')">X</button>
         </div>
     </div>
     <!-- End Row 3 -->
@@ -95,41 +95,41 @@
     <!-- Row 4 -->
     <div class="row">
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('C')">C</button>
+            <button class="btn btn-primary" onclick="calcInput('C')">C</button>
         </div>
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('0')">0</button>
+            <button class="btn btn-primary" onclick="calcInput('0')">0</button>
         </div>
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('=')">=</button>
+            <button class="btn btn-primary" onclick="calcInput('=')">=</button>
         </div>
         <div class="col-md-3">
-            <button class="btn btn-primary" onclick="CalcInput('/')">/</button>
+            <button class="btn btn-primary" onclick="calcInput('/')">/</button>
         </div>
     </div>
     <!-- End Row 4 -->
 </div>
 <!-- End Container -->
 <script>
-    function printInput(InputStr) {
-        let inputbox = document.getElementById("InputBox");
-        inputbox.value += InputStr;
+    function printInput(inputStr) {
+        let inputBox = document.getElementById("inputBox");
+        inputBox.value += inputStr;
     }
 
     function clearInput() {
-        document.getElementById("InputBox").value = '';
+        document.getElementById("inputBox").value = '';
     }
 
     function printResult() {
-        let inputbox = document.getElementById("InputBox");
-        let mathexp = inputbox.value.replace('X', '*');
+        let inputBox = document.getElementById("inputBox");
+        let mathexp = inputBox.value.replace('X', '*');
         if (mathexp) {
-            inputbox.value = eval(mathexp);
+            inputBox.value = eval(mathexp);
         }
     }
 
-    function CalcInput(inputname) {
-        switch (inputname) {
+    function calcInput(inputName) {
+        switch (inputName) {
             case 'C':
                 clearInput();
                 break;
@@ -137,7 +137,7 @@
                 printResult();
                 break;
             default:
-                printInput(inputname);
+                printInput(inputName);
         }
     }
 </script>
