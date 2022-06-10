@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng 20 số trong dãy fibonacci</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 200px; width: 380px">
+    <h2 style="margin-left: 20px">Tổng 20 số trong dãy fibonacci</h2>
+    <label style="margin-left: 20px">Nhập số dãy số fibonacci: </label>
+    <input style="margin-left: 20px" type="number" id="fibonacci"> <br><br>
+    <input style="margin-left: 20px" type="button" value="Submit" onclick="tolal20Number()">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+<script>
+    function tolal20Number() {
+        let number = document.getElementById('fibonacci').value;
+        let n1 = 0, n2 = 1, nextTerm;
+        let total = 0;
+        for (let i = 1; i <= number; i++) {
+            total = total + n1;
+            if(i === 20){
+                document.getElementById('result').innerText = 'Tổng 20 số = ' + total;
+                break;
+            }
+                nextTerm = n1 + n2;
+                n1 = n2;
+                n2 = nextTerm;
+
+        }
+    }
+</script>
+</body>
+</html>

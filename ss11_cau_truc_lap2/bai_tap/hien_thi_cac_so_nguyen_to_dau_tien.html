@@ -13,21 +13,32 @@
     <p style="margin-left: 20px" id="result"></p>
 </div>
 <script>
-    function checkNumber() {
-        let integer = parseInt(document.getElementById('integer').value);
-        let checkInteger = false;
-        for (let i = 2; i < integer; i++){
-            if(integer % i !== 0){
-                checkInteger = true;
-            } else {
-                checkInteger = false;
+
+    function isPrime(number) {
+        /* 0 là k số nt, 1 là số nt*/
+        let flag = 1;
+
+        if (number < 2) {
+            return flag = 0;    /* 2 < return 0*/
+        }
+        let i = 2;
+        while (i < number) {
+            if (number % i === 0) {
+                flag = 0;
                 break;
             }
+            i++;
         }
-        if(checkInteger === true){
-            document.getElementById('result').innerText = integer + ' là số nguyên tố';
+        return flag;
+    }
+
+    function checkNumber(){
+        let integer = parseInt(document.getElementById('integer').value);
+        let check = isPrime(integer);
+        if (check === 1) {
+            document.getElementById('result').innerText = 'Số ' + integer + " là số nguyên tố."
         } else {
-            document.getElementById('result').innerText = integer + ' không phải là số nguyên tố';
+            document.getElementById('result').innerText = 'Số ' + integer + " không phải là số nguyên tố."
         }
     }
 </script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số đầu tiên trong dãy fibonacci chia hết cho 5</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 200px; width: 380px">
+    <h2 style="margin-left: 20px">Tìm số đầu tiên chia hết cho 5</h2>
+    <label style="margin-left: 20px">Nhập số dãy số fibonacci: </label>
+    <input style="margin-left: 20px" type="number" id="fibonacci"> <br><br>
+    <input style="margin-left: 20px" type="button" value="Submit" onclick="findTheDivisor()">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+<script>
+    function findTheDivisor() {
+        let number = document.getElementById('fibonacci').value;
+        let n1 = 0, n2 = 1, nextTerm;
+
+        for (let i = 1; i <= number; i++) {
+            // document.write(n1 + '<br>');
+            if (n1 % 5 === 0 && n1 !== 0) {
+                document.getElementById('result').innerText = 'Số đầu tiên chia hết cho 5 trong dãy fibonacci là: ' + n1;
+                break;
+            } else {
+                nextTerm = n1 + n2;
+                n1 = n2;
+                n2 = nextTerm;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

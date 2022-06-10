@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng 30 số chia hết cho 7</title>
+</head>
+<body>
+<script>
+    let total = 0;
+    let count = 0;
+    for (let i = 1; true; i++) {
+        if (i % 7 === 0) {
+            count++;
+            if (count === 31) {
+                break;
+            }
+            total = total + i;
+            // document.write(i + '<br>');
+        }
+    }
+    document.write('Tổng 30 số chia hết cho 7: ' + total);
+</script>
+</body>
+
+
+</html>

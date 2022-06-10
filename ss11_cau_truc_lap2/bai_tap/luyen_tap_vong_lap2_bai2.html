@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa của một số nguyên dương</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 200px; width: 420px">
+    <h2 style="margin-left: 20px">Giai thừa của một số nguyên dương</h2>
+    <label style="margin-left: 20px">Nhập số nguyên dương N: </label>
+    <input style="margin-left: 20px" type="number" id="integer"> <br><br>
+    <input style="margin-left: 20px" type="button" value="Submit" onclick="factorialCalculation()">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+<script>
+    function factorialCalculation() {
+        let integer = 1;
+        let N = parseInt(document.getElementById('integer').value);
+        for (let i = 1; i <= N; i++) {
+            integer = integer * i
+        }
+        document.getElementById('result').innerText = 'N! = ' + integer;
+    }
+</script>
+</body>
+</html>
