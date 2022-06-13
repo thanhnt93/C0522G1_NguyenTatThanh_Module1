@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông</title>
+</head>
+<body>
+<script>
+    let hight = parseInt(prompt("Nhập vào chiều cao của tam giác: "));
+    let i, j;
+    for (i = 1; i <= hight; ++i) {
+        for (j = 1; j <= i; ++j) {
+            document.write("* ");
+        }
+        document.write('<br>');
+    }
+
+    document.write('<br>');
+
+
+    for (i = hight; i >= 1; i--) {
+        for (j = 1; j <= i; j++) {
+            document.write("* ");
+        }
+        document.write('<br>');
+    }
+
+    document.write('<br>');
+
+    let result = '';
+    for (i = 1; i <= hight; i++) {
+        for (j = 1; j <= hight; j++) {
+            if (j > i - 1) {
+                result = result + "* ";
+            } else {
+                result = result + "&nbsp&nbsp&nbsp";
+            }
+        }
+        result = result + "<br>";
+    }
+    document.write(result);
+
+    document.write('<br>');
+
+    let result1 = '';
+    for (i = 1; i <= hight; i++) {
+        for (j = 1; j <= hight; j++) {
+            if (i > hight - j) {
+                result1 = result1 + "* ";
+            } else {
+                result1 = result1 + "&nbsp&nbsp&nbsp";
+            }
+        }
+        result1 = result1 + "<br>";
+    }
+      document.write(result1);
+
+</script>
+</body>
+</html>

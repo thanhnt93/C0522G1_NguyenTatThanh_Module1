@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In hình trái tim</title>
+</head>
+<body>
+<script>
+    let heart = "<table >";
+    let high = parseInt(prompt("nhập vào chiều high trái tim: "));
+    for (let row = 0; row < high; row++) {
+        heart += "<tr>";
+
+        for (let collum = 0; collum <= high; collum++) {
+            if (row < high / 2) {
+                if (row + collum < (high / 4) || collum - row > (high * 3 / 4) || (collum - row > (high / 4) && collum - row < (high * 3 / 4) && collum + row < (high * 3 / 4))) {
+                    heart += "<td width = 20px>" + "</td>";
+                } else {
+                    heart += "<td width = 20px>" + "*" + "</td>";
+                }
+
+            } else {
+                if (row - collum > (high / 2 - (high - 1) % 2) || collum + row >= 3 * high / 2) {
+                    heart += "<td width= 20px>" + "</td>";
+                } else {
+                    heart += "<td width= 20px>" + "*" + "</td>";
+                }
+
+            }
+        }
+        heart += "</tr>";
+    }
+    heart += "</table>";
+    document.write(heart);
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi ngân hàng</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 280px; width: 460px">
+    <h3 style="margin-left: 20px">Tính lãi suất vay</h3>
+    <label style="margin-left: 20px">Nhập số tiền vay:</label>
+    <input style="margin-left: 20px" type="number" id="borrowMoney"> VNĐ<br><br>
+    <label style="margin-left: 20px">Nhập số tháng:</label>
+    <input style="margin-left: 20px" type="number" id="month"><br><br>
+    <label style="margin-left: 20px">Nhập lãi suất hàng tháng:</label>
+    <input style="margin-left: 20px" type="number" id="interestRate"> %<br><br>
+    <input style="margin-left: 20px" type="button" onclick="bankProfit();" value="Kiểm tra">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+
+<script>
+    function bankProfit() {
+        //số tiền vay
+        let borrowMoney = parseFloat(document.getElementById("borrowMoney").value);
+        let month = parseInt(document.getElementById("month").value);
+        let interestRate = parseFloat(document.getElementById("interestRate").value);
+        let result = 0;
+        let borrowMoney2 = borrowMoney;
+        if(borrowMoney > 0 && month > 0 && interestRate > 0){
+            for( let i = 1;i <= month;i++){
+                result = result+borrowMoney2 * interestRate / 100;
+                borrowMoney2 = borrowMoney2 + result;
+            }
+        }
+        document.getElementById("result").innerText = 'Lãi suất hàng tháng = ' + result;
+    }
+</script>
+</body>
+</html>l>

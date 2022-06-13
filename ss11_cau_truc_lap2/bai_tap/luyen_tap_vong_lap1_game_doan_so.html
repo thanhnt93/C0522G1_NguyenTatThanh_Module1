@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Game đoán số</title>
+</head>
+<body>
+<button onclick='guessTheNumber()'>Bắt đầu chơi</button>
+<script>
+    function guessTheNumber() {
+        debugger;
+        let number = +prompt('Nhập số muốn đoán trong khoảng?')
+        let randomNumber = Math.floor(Math.random() * number);
+        console.log(randomNumber);
+        let checkNumber = +prompt ('Nhập số bạn đoán');
+        let count = 0;
+        while (checkNumber !== randomNumber) {
+            count++;
+            if (count === 4) {
+                alert('Bạn hết số lần đoán')
+                break;
+            } else if (checkNumber < randomNumber) {
+                alert('Số bạn đoán bé hơn');
+            } else {
+                alert ('Số bạn đoán lớn hơn')
+            }
+            checkNumber = prompt ('Nhập số bạn đoán');
+        }
+        if (count === 4) {
+            document.write('Bạn hết số lần đoán');
+        } else {
+            document.write('Bạn đã đoán đúng số.');
+        }
+    }
+</script>
+</body>
+</html>

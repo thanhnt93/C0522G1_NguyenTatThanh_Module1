@@ -17,9 +17,10 @@
         let integer = 1;
         let N = parseInt(document.getElementById('integer').value);
         for (let i = 1; i <= N; i++) {
-            integer = integer * i
+            integer = integer * i;
         }
         document.getElementById('result').innerText = 'N! = ' + integer;
+        document.write('N! = ' + integer);
     }
 </script>
 </body>
