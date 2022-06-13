@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập string</title>
+</head>
+<body>
+<!--Nhập vào một chuỗi ký tự  thực hiện công việc sau:-->
+<!--a. In ra chuỗi đảo ngược của chuỗi đã cho-->
+<!--b. Đổi chuổi đã cho sang chữ hoa-->
+<!--c. Đổi chuỗi đã cho sang chữ thường-->
+<!--d. Đổi chuỗi đã cho sang vừa chữ hoa vừa chữ thường (các ký tự chữ hoa thì thành chữ-->
+<!--thường và ngược lại)-->
+<script>
+    let str = prompt("Nhập chuỗi:");
+    // String ngược
+    document.write("String ngược: ");
+    for (let i = str.length - 1; i >= 0; i--) {
+        document.write(str[i]);
+    }
+    document.write("<br>");
+
+    //String Hoa
+    let newString = "";
+    for (let i = 0; i < str.length; i++) {
+        if (str[i].charCodeAt(0) >= 97 && str[i].charCodeAt(0) <= 122) {
+            newString += String.fromCharCode(str[i].charCodeAt(0) - 97 + 65);
+            // alert(String.fromCharCode(str[i].charCodeAt(0)-97+65));
+        } else {
+            newString += str[i];
+        }
+    }
+    document.write("Sring Hoa: " + newString);
+
+
+    document.write("<br>");
+    //String thường
+    newString = "";
+    for (let i = 0; i < str.length; i++) {
+        if (str[i].charCodeAt(0) >= 65 && str[i].charCodeAt(0) <= 90) {
+            newString += String.fromCharCode(str[i].charCodeAt(0) - 65 + 97);
+            // alert(String.fromCharCode(str[i].charCodeAt(0)-65+97));
+        } else {
+            newString += str[i];
+        }
+    }
+    document.write("String thường: " + newString);
+
+    document.write("<br>");
+    //String Hoa - thương.
+    newString = "";
+    for (let i = 0; i < str.length; i++) {
+        if (str[i].charCodeAt(0) >= 65 && str[i].charCodeAt(0) <= 90) {
+            newString += String.fromCharCode(str[i].charCodeAt(0) - 65 + 97);
+            // alert(String.fromCharCode(str[i].charCodeAt(0)-65+97));
+        } else if (str[i].charCodeAt(0) >= 97 && str[i].charCodeAt(0) <= 122) {
+            newString += String.fromCharCode(str[i].charCodeAt(0) + 65 - 97);
+        } else {
+            newString += str[i];
+        }
+    }
+    document.write("String Hoa - Thương: " + newString);
+    document.write("<br>");
+</script>
+</body>
+</html>

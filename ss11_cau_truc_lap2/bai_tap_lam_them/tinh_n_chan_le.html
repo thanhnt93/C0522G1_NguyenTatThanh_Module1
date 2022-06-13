@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính N chẳn lẻ</title>
+</head>
+<body>
+<!--Tính n!! = 1*3*5*.....*n(n lẽ) = 2*4*6*....*n(n chẵn)-->
+<script>
+    let number;
+    do {
+        number = parseInt(prompt("Nhập số: "));
+    } while (number <= 0);
+    let factorial = 1;
+    if (number % 2 === 0) {
+        for (let i = 2; i <= number; i = i + 2) {
+            factorial = factorial * i;
+        }
+    } else {
+        for (let i = 1; i <= number; i = i + 2) {
+            factorial = factorial * i;
+        }
+    }
+    alert("n!! = " + factorial);
+</script>
+</body>
+</html>
