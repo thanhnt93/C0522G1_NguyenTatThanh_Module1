@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối array</title>
+</head>
+<body>
+<script>
+    let arrA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let arrB = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+    let arrC = new Array(2, 4, 6, 8, 10, 11, 13, 15, 17, 19, 20, 22, 24, 26, 28, 30, 31, 33, 35, 37, 39);
+
+    // arrC = arrC + arrA + arrB;
+    // alert(arrC.length)
+
+    for (let i = 0; i < arrA.length; i++) {
+        arrC.push(arrA[i]);
+    }
+    for (let i = 0; i < arrB.length; i++) {
+        arrC.push(arrB[i]);
+    }
+
+    for (let i = 0; i < arrC.length; i++) {
+        document.write(arrC[i] + " ");
+    }
+</script>
+</body>
+</html>

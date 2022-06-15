@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số trong mảng</title>
+</head>
+<body>
+<script>
+    let arr = [1, 5, 6, 7, 9, 12, 18, 24, 22, 40];
+    let check = false;
+    let number = parseInt(prompt("Nhập số nguyên N: "))
+    for (let i = 0; i < arr.length; i++) {
+        if (number === arr[i]) {
+            check = true;
+            break;
+        } else {
+            check = false;
+        }
+    }
+    if (check === true) {
+        alert(number + " is in the array");
+    } else {
+        alert(number + " is not in the array");
+    }
+</script>
+</body>
+</html>

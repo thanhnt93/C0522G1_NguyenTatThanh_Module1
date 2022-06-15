@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Value or Index</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 13 , 5, 9, 8, 7, 6, 10];
+    let max = 0;
+    let count = 0;
+    for (let i = 0; i < arr.length; i++){
+        if(max < arr[i]){
+            max = arr[i];
+            count = i;
+        }
+    }
+    document.write("Max: " + max);
+    document.write("<br>");
+    document.write("Index: " + count);
+</script>
+</body>
+</html>

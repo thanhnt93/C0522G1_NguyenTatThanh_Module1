@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thay thế ký tự trong Array</title>
+</head>
+<body>
+<script>
+    let arrStr = ["C", "-", "0", "-", "5", "-", "2", "-", "2", "-", "G", "-", "1"];
+    for (let i = 0; i < arrStr.length; i++) {
+        if (arrStr[i] === "-") {
+            arrStr[i] = "_";
+        }
+    }
+
+    for (let i = 0; i < arrStr.length; i++){
+        document.write(arrStr[i] + " ");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giá trị lớn nhất và trung bình Array</title>
+</head>
+<body>
+<script>
+    let arrN = [1, 3, 5];
+    let max = 0;
+    let medium = 0;
+    for (let i = 0; i < arrN.length; i++) {
+        if (max < arrN[i]) {
+            max = arrN[i];
+        }
+        medium = medium + arrN[i];
+    }
+    document.write("Max = " + max);
+
+    document.write("<br>")
+
+    medium = medium / arrN.length;
+    document.write("Trung bình tổng giá trị trong mảng = " + medium)
+</script>
+</body>
+</html>

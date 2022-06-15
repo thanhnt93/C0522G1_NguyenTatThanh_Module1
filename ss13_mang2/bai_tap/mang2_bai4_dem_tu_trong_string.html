@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm từ trong chuỗi</title>
+</head>
+<body>
+<script>
+    // let str = "Nguyen Tat Thanh hoc lop c0522g1";
+    let str = prompt("Nhập chuỗi ký tự: ")
+    let count = 1;
+    for (let i = 0; i < str.length;i++){
+        if(str[i] === " "){
+            count++;
+        }
+    }
+    document.write("Tổng cộng có " + count + " từ.");
+</script>
+</body>
+</html>

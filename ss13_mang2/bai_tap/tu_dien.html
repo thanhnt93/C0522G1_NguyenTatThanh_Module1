@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<div style="border: 2px solid black; height: 200px; width: 380px; background-color: #9aa097">
+    <h3 style="margin-left: 20px">Từ điển</h3>
+    <label style="margin-left: 20px">Nhập từ: </label>
+    <input style="margin-left: 20px" type="text" name="" id="import">
+    <input type="button" value="Dịch" onclick="lookUp()">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+<script>
+    function lookUp() {
+        let arrayEn = ["red", "green","Hoàng"];
+        let arrayVi = ["Đỏ", "Xanh", "2k2"];
+        let str = document.getElementById("import").value;
+        let indexEn = 0;
+        let result = "";
+        for (let i = 0; i < arrayEn.length; i++) {
+            if (str === arrayEn[i]) {
+                indexEn = i; //2
+                for (let j = 0; j < arrayVi.length; j++) {
+                    if (indexEn === j) {
+                        result = arrayVi[j];
+                    }
+                }
+            }
+        }
+        document.getElementById("result").innerHTML = "Translate: " + result;
+    }
+</script>
+</body>
+</html>

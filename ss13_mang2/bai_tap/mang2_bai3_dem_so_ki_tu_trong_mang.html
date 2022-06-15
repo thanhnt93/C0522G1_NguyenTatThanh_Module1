@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm kí tự số trong array</title>
+</head>
+<body>
+<script>
+    let arr = ["n", "g", "u", "y", "e", "n", "5", "t", "a", "t", "86", "t", "h", "a", "n", "h", "2", "33"];
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (isNaN(arr[i]) === false) {
+            count++;
+        }
+    }
+    document.write("Có " + count + " kí tự số trong chuỗi arr");
+</script>
+</body>
+</html>
