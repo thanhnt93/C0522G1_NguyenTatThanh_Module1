@@ -8,21 +8,32 @@
 <script>
     let arrA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let arrB = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-    let arrC = new Array(2, 4, 6, 8, 10, 11, 13, 15, 17, 19, 20, 22, 24, 26, 28, 30, 31, 33, 35, 37, 39);
 
-    // arrC = arrC + arrA + arrB;
-    // alert(arrC.length)
 
+    let arrC = new Array(arrA.length + arrB.length);
+
+    // a sang c
     for (let i = 0; i < arrA.length; i++) {
-        arrC.push(arrA[i]);
-    }
-    for (let i = 0; i < arrB.length; i++) {
-        arrC.push(arrB[i]);
+        arrC[i] = arrA[i];
     }
 
-    for (let i = 0; i < arrC.length; i++) {
-        document.write(arrC[i] + " ");
+    // b sang c
+    for (let j = 0; j < arrB.length; j++) {
+        arrC[arrA.length + j] = arrB[j];
+        //c[3] = b[0]
+        //c[4] = b[1]
+        //c[5] = b[2]
+        //c[6] = b[3]
     }
+    for (let i = 0; i < arrC.length;i++){
+        document.write(arrC[i] + " ")
+    }
+
+    // document.write(arrC);
+
+    //cach 2
+    // let arrC = arrA.concat(arrB);
+    // document.write(arrC);
 </script>
 </body>
 </html>

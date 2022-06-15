@@ -7,24 +7,50 @@
 <body>
 <script>
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    let count = 0;
+
     let number = parseInt(prompt("Nhập số nguyên N: "));
+    /*Tìm V có trong mảng không */
+    let index = -1;
     for (let i = 0; i < arr.length; i++) {
         if (number === arr[i]) {
-            count++;
-            for (let j = i; j < arr.length - count; j++) {
-                arr[j] = arr[j + 1];
-            }
-            arr[arr.length - count] = 0;
-            i--;
+            index = i;
         }
     }
+    // document.write(index);
+    if (index !== -1) {
+        /*Xóa nếu number tồn tại*/
+        for (let i = index; i < arr.length - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        //gán 0 cho phần tử cuối
+        arr[arr.length - 1] = 0;
 
-    document.write("arr = [ ");
-    for (let i = 0; i < arr.length; i++) {
-        document.write(arr[i] + " ");
+        for (let i = 0; i < arr.length; i++){
+            document.write(arr[i] + " ");
+        }
+    } else {
+        /*Ko có number trong mảng*/
+        alert("Not found: " + number);
     }
-    document.write(" ];");
+
+
+    // let count = 0;
+    // let number = parseInt(prompt("Nhập số nguyên N: "));
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (number === arr[i]) {
+    //         count++;
+    //         for (let j = i; j < arr.length - count; j++) {
+    //             arr[j] = arr[j + 1];
+    //         }
+    //         arr[arr.length - count] = 0;
+    //         i--;
+    //     }
+    // }
+    // document.write("arr = [ ");
+    // for (let i = 0; i < arr.length; i++) {
+    //     document.write(arr[i] + " ");
+    // }
+    // document.write(" ];");
 </script>
 </body>
 </html>
