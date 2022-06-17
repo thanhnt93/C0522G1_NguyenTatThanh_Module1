@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo hàm 2 tham số</title>
+</head>
+<body>
+<script>
+    let numberA = parseInt(prompt("Nhập số thứ I: "));
+    let numberB = parseInt(prompt("Nhập số thứ II: "));
+    comparison(numberA, numberB);
+
+    function comparison(numberA, numberB) {
+        if (numberA > numberB) {
+            alert(numberA + " lớn hơn " + numberB);
+        } else {
+            let total2Number = numberA + numberB;
+            alert("Total 2 number: " + total2Number)
+        }
+    }
+</script>
+</body>
+</html>

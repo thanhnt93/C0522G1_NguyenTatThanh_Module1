@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feet - Meters</title>
+</head>
+<body>
+<div style="border: 2px solid black;height: 200px; width: 380px">
+    <h3 style="margin-left: 20px">Chuyển đổi Feet - Meters</h3>
+    <select style="margin-left: 20px" id="convert">
+        <option value="feet">Feet</option>
+        <option value="meter">Meter</option>
+    </select>
+    <input style="margin-left: 20px" type="number" id="number"> <br><br>
+    <input style="margin-left: 20px" type="button" value="Chuyển đổi" onclick="convertFM()">
+    <p style="margin-left: 20px" id="result"></p>
+</div>
+<script>
+    function convertFM() {
+        let number = parseInt(document.getElementById("number").value);
+        let metter, feet;
+        let convert = document.getElementById("convert").value;
+        if (convert === "feet") {
+            metter = footToMeter(number);
+            document.getElementById("result").innerHTML = number + " Feet = " + metter + " Metter";
+        } else {
+            feet = meterToFoot(number);
+            document.getElementById("result").innerHTML = number + " Meter = " + feet + " Feet";
+        }
+    }
+
+    function footToMeter(foot) {
+        let meter = 0.305 * foot;
+        return meter;
+    }
+
+    function meterToFoot(meter) {
+        let foot = 3.279 * meter;
+        return foot;
+    }
+</script>
+</body>
+</html>

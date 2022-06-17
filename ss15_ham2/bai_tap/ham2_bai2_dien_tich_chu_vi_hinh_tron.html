@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích, Chu vi hình tròn</title>
+</head>
+<body>
+<script>
+    let d = parseInt(prompt("Nhập đường kính d:"));
+    perimeter(d);
+    let r = parseInt(prompt("Nhập bán kính r:"));
+    area(r);
+
+
+    function perimeter(d) {
+        let PI = 3.14;
+        let C = parseInt(d) * PI;
+        alert('Chu vi hình tròn C = ' + C);
+    }
+
+    function area(r) {
+        let PI = 3.14;
+        let S = (parseInt(r) * parseInt(r) * PI);
+        alert('Diện tích hình tròn S = ' + S);
+    }
+</script>
+</body>
+</html>

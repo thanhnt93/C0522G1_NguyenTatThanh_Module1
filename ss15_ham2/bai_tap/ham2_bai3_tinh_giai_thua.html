@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("Nhập số nguyên: "));
+    alert(factorial(number));
+
+    function factorial(number) {
+        let numberFactorial = 1;
+        for (let i = 1; i <= number; i++) {
+            numberFactorial = numberFactorial * i;
+        }
+        return numberFactorial;
+    }
+</script>
+</body>
+</html>

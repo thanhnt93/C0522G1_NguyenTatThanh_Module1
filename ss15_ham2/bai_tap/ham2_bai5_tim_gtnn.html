@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị nhỏ nhất</title>
+</head>
+<body>
+<script>
+    let arrN = Array(2);
+    for (let i = 0; i <= 2; i++) {
+        arrN[i] = prompt("Nhập phần tử số thứ " + i + ":");
+    }
+    findTheSmallestValue(arrN);
+
+    function findTheSmallestValue(arr) {
+        let max = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        alert("Giá trị nhỏ nhất trong " + arr.length + " số là: " + max);
+    }
+</script>
+</body>
+</html>

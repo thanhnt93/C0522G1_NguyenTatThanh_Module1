@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra kí tự trong array</title>
+</head>
+<body>
+<script>
+    let arrStr = Array();
+    let number = prompt("Nhập số phần tử:");
+    for (let i = 1; i <= number; i++) {
+        arrStr[i] = prompt("Nhập vào phần tử thứ " + i + ":");
+    }
+
+    let str = prompt("Nhập kí tự bất kì: ");
+
+    checkElement(arrStr, str);
+
+    function checkElement(arrStr, str) {
+        let count = 0;
+        let check = false;
+        for (let i = 0; i < arrStr.length; i++) {
+            if (str === arrStr[i]) {
+                count++;
+                check = true;
+            }
+        }
+        if (check === true) {
+            alert("Kí tự " + str + " xuất hiện " + count + " lần.");
+        } else {
+            alert(-1);
+        }
+    }
+</script>
+</body>
+</html>

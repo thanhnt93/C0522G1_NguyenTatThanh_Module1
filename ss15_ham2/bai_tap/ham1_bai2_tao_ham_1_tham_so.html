@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm 1 tham số</title>
+</head>
+<body>
+<input type="button" value="Submit" onclick="callFunction()">
+
+<script>
+    function callFunction() {
+        let number = parseInt(prompt("Nhập số: "));
+        alert(increaseInValue(number));
+    }
+
+    function increaseInValue(number) {
+        number++;
+        return number;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ 2 biến số</title>
+</head>
+<body>
+<script>
+    let numberA = parseInt(prompt("Nhập số a ="));
+    let numberB = parseInt(prompt("Nhập số b ="));
+    islandNumber(numberA, numberB);
+
+
+    function islandNumber(numberA, numberB) {
+        let numberC = numberA;
+        numberA = numberB;
+        numberB = numberC;
+        alert("a = " + numberA + " ;b = " + numberB);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm thao tác với array</title>
+</head>
+<body>
+<script>
+    let arrStar1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arrStar2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major ", "Leo"];
+
+    findStar(arrStar1, arrStar2)
+
+
+    function findStar(arrStar1, arrStar2) {
+        let star = prompt("Nhập chòm sao: ");
+        let check = false;
+        let count = 0;
+        for (let i = 0; i < arrStar1.length; i++) {
+            if (star === arrStar1[i]) {
+                count = i;
+                check = true
+                break;
+            }
+        }
+        if (check) {
+            document.write(arrStar1[count] + " tương ứng với chòm sao " + arrStar2[count]);
+        } else {
+            document.write("Không tìm thấy ngôi sao nào.");
+        }
+
+    }
+
+</script>
+</body>
+</html>
