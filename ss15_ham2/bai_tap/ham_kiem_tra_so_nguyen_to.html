@@ -11,9 +11,8 @@
 
     function isPrime(number) {
         let count = 0; // đếm số ước của số đang check
-        let isPrime = false;
 
-        if (number === 0) {
+        if (number <= 1) {
             alert(number + " không phải là số nguyên tố")
         } else {
             for (let i = 1; i <= number; i++) {
@@ -21,12 +20,7 @@
                     count++;
                 }
             }
-
             if (count === 2) {
-                isPrime = true;
-            }
-
-            if (isPrime) {
                 alert(number + " là số nguyên tố")
             } else {
                 alert(number + " không phải là số nguyên tố")
