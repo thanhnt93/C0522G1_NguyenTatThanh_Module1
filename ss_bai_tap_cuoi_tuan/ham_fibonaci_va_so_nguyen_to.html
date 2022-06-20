@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết 1 hàm nhận vào 1 số nguyên duy nhất hàm-->
+<!--trả về mảng số nguyên từ 0 đến số được truyền-->
+<!--vào và phải thỏa mãn 2 yêu cầu: thứ nhất số đó-->
+<!--thuộc dãy fibonacci , thứ 2 số đó phải là số nguyên-->
+<!--tố. In ra mảng đấy-->
+<script>
+    let number = parseInt(prompt("Nhập số nguyên: "));
+    checkIsPrimeAndFibonacci(number);
+
+    function checkIsPrimeAndFibonacci(number) {
+        for (let i = 0; i <= number; i++) {
+            if (i === isPrime(i) && fibonacci(i)) {
+                document.write(i + " ");
+            }
+        }
+    }
+
+    function isPrime(number) {
+        let count = 0;
+        if (number >= 2) {
+            for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    count++;
+                }
+            }
+            if (count === 2) {
+                return number;
+            }
+        }
+    }
+
+    function fibonacci(number) {
+        let n1 = 0, n2 = 1, nextTerm;
+        let arrFibonacci = Array();
+        for (let i = 1; i <= 20; i++) {
+            // document.write(n1 + '<br>');
+            arrFibonacci.push(n1);
+            nextTerm = n1 + n2;
+            n1 = n2;
+            n2 = nextTerm;
+        }
+        for (let i = 0; i < arrFibonacci.length; i++) {
+            // document.write(arrFibonacci[i] + " ")
+            if (number === arrFibonacci[i]) {
+                return number;
+            }
+        }
+    }
+</script>
+</body>
+</html>

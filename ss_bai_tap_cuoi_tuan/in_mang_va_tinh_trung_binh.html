@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết chương trình cho người dùng nhập vào 1
+    // mảng số nguyên với độ dài cho người dùng tùy
+    // chọn tuy nhiên không được lớn hơn 50. Sau đó tiếp
+    // tục thực hiện 2 yêu cầu:
+    // a) In ra mảng người dùng vừa nhập.
+    // b) Tính trung bình cộng của số chẵn tại vị trí
+    // lẻ trong mảng
+
+    let arrStr = Array();
+    let number = prompt("Nhập số phần tử:");
+    for (let i = 0; i < number; i++) {
+        arrStr[i] = parseInt(prompt("Nhập vào phần tử thứ " + i + ":"));
+    }
+    printArr(arrStr);
+    let avg = average(arrStr);
+    document.write("Trung bình cộng số chẵn: " + avg);
+
+    function printArr(arr) {
+        for (let i = 0; i < arr.length; i++){
+            document.write(arr[i] + " ");
+        }
+    }
+    function average(arr) {
+        let evenNumber = Array();
+
+        for (let i = 0; i < arr.length; i++){
+            //Lấy index lẻ
+            if(i % 2 === 1){
+                //Lấy số chẵn trong mảng
+                if(arr[i] % 2 === 0){
+                    evenNumber.push(arr[i]);
+
+                }
+            }
+        }
+        let total = 0;
+        let countAvg = 0;
+        for (let i = 0; i < evenNumber.length; i++){
+            total = total + evenNumber[i];
+            countAvg++;
+        }
+        return total / countAvg;
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết 1 hàm nhận vào 1 mảng các số nguyên.-->
+<!--Đếm số lần xuất hiện của các phần tử trong mảng-->
+<!--đó. Ví dụ:-->
+<!--[ 1,2,3,3,2,4] => 1 : 1 lần , 2 : 2 lần, 3: 2 lần, 4: 1-->
+<!--lần.-->
+<script>
+    let arrN = Array();
+    let number = prompt("Nhập số phần tử:");
+    for (let i = 0; i < number; i++) {
+        arrN[i] = parseInt(prompt("Nhập vào phần tử thứ " + i + ":"));
+    }
+    for (let i = 0; i < arrN.length; i++) {
+        document.write(arrN[i] + " ");
+    }
+    document.write("<br>");
+    // let arrN = [1, 2, 3, 2, 1, 4, 5, 2, 1, 4, 2, 1, 4, 1, 5];
+
+    countElementsNumber(arrN)
+
+    function countElementsNumber(arrN) {
+        let arrCount = Array();
+        arrCount.push(arrN[0]);
+
+        let count = 0;
+        for (let i = 0; i < arrN.length; i++) {
+            let index = 0;
+            for (let j = 0; j < arrCount.length; j++) {
+                if (arrN[i] === arrCount[j]) {
+                    index++;
+                }
+            }
+            if (index === 0) {
+                arrCount.push(arrN[i]);
+            }
+        }
+
+        for (let i = 0; i < arrCount.length; i++) {
+            for (let j = 0; j < arrN.length; j++) {
+                if (arrCount[i] === arrN[j]) {
+                    count++;
+                }
+            }
+            // document.write(arrCount[i] + " ")
+            document.write("số lần kí tự " + arrCount[i] + " xuất hiện = " + count + "<br>");
+            count = 0;
+        }
+    }
+</script>
+
+
+</body>
+</html>

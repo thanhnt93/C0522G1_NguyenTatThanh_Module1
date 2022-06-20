@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Xây d?ng 1 hàm nh?n vào 2 m?ng b?t kì. N?u-->
+<!--m?ng th? 2 là con c?a m?ng th? nh?t thì tr? v?-->
+<!--true, ngu?c l?i tr? v? false. Ví d?:-->
+<!--?M?ng th? nh?t [ 1, 2, 3, 4 ] m?ng th? 2 [2, 3]-->
+<!--=> true.-->
+<!--?M?ng th? nh?t [ 1, 2, 3, 4 ] m?ng th? 2 [3, 2]-->
+<!--=> false-->
+<body>
+<script>
+    let arrNumberA = [1, 2, 3, 4];
+    let arrNumberB = [2, 1, 3];
+    if (compareTwoArrays(arrNumberA, arrNumberB)) {
+        alert(true)
+    } else {
+        alert(false)
+    }
+
+    function compareTwoArrays(arrA, arrB) {
+        let indexK;
+        let check = false;
+        if (arrA.length < arrB.length) {
+            return false;
+        }
+
+        for (let i = 0; i < arrA.length; i++) {
+            if (arrB[0] === arrA[i] && arrA.length - i >= arrB.length) {
+                indexK = i + 1;
+                check = true;
+                for (let j = 1; j < arrB.length; j++, indexK++) {
+                    if (arrB[j] !== arrA[indexK]) {
+                        check = false;
+                        break;
+                    }
+                }
+                if (check) {
+                    break;
+                }
+            }
+        }
+        return check;
+    }
+</script>
+</body>
+</html>
