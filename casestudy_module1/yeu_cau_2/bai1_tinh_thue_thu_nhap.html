@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập</title>
+</head>
+<body>
+<script>
+    let salary = parseInt(prompt("Nhập lương: "));
+    if (salary > 15000000) {
+        let tax = salary * 20 / 100;
+        let netSalary = salary - tax;
+        document.write("Lương của bạn: " + salary + "<br>");
+        document.write("Bạn được tính 20% thu nhập thuế: " + tax + "<br>");
+        document.write("Lương ròng: " + netSalary);
+    } else if (salary > 7000000 && salary <= 15000000) {
+        let tax = salary * 10 / 100;
+        let netSalary = salary - tax;
+        document.write("Lương của bạn: " + salary + "<br>");
+        document.write("Bạn được tính 10% thu nhập thuế: " + tax + "<br>");
+        document.write("Lương ròng: " + netSalary);
+    } else {
+        let tax = salary * 5 / 100;
+        let netSalary = salary - tax;
+        document.write("Lương của bạn: " + salary + "<br>");
+        document.write("Bạn được tính 5% thu nhập thuế: " + tax + "<br>");
+        document.write("Lương ròng: " + netSalary);
+    }
+</script>
+</body>
+</html>

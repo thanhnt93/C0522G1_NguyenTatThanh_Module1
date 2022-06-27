@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+<script>
+    let chieuDoc = parseInt(prompt("Nhập chiều dọc: "));
+    let chieuNgang = parseInt(prompt("Nhập chiều ngang: "))
+    for (let i = 1; i <= chieuDoc; i++) {
+        for (let j = 1; j <= chieuNgang; j++) {
+            if (i === 1 || i === chieuDoc || j === 1 || j === chieuNgang) {
+                document.write("*");
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

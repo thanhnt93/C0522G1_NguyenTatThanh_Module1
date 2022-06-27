@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = [7, 2, 5, 3, 5, 3];
+    let arrB = [13, 7, 2, 5, 4, 6, 12, 3, 5, 3, 11, 15];
+    let arrMissingValue = missingValue(arrA, arrB);
+    document.write("arrB có nhưng không xuất hiện tại arrA là: ");
+    for (let i = 0; i < arrMissingValue.length; i++) {
+        document.write(arrMissingValue[i] + " ")
+    }
+
+    function missingValue(arrA, arrB) {
+        let arrMissingValue = [];
+        let j = 0;
+        if (arrA.length < arrB.length) {
+            for (let i = 0; i < arrB.length; i++) {
+                for (; j < arrB.length; j++) {
+                    if (arrA[i] === arrB[j]) {
+                        j = j + 1;
+                        break;
+                    } else {
+                        arrMissingValue.push(arrB[j]);
+                    }
+                }
+            }
+        }
+        // document.write(arrMissingValue);
+        return arrMissingValue;
+    }
+</script>
+</body>
+</html>

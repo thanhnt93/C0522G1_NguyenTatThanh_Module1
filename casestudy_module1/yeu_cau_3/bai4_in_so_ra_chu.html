@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In số ra chữ</title>
+</head>
+<body>
+<script>
+    let number = prompt("Nhập số: ");
+    let check = true;
+    for (let i = 0; i < number.length; i++) {
+        if (check) {
+            switch (parseInt(number[i])) {
+                case 0:
+                    document.write("Không ");
+                    break;
+                case 1:
+                    document.write("Một ");
+                    break;
+                case 2:
+                    document.write("Hai ");
+                    break;
+                case 3:
+                    document.write("Ba ");
+                    break;
+                case 4:
+                    document.write("Bốn ");
+                    break;
+                case 5:
+                    document.write("Năm ");
+                    break;
+                case 6:
+                    document.write("Sáu ");
+                    break;
+                case 7:
+                    document.write("Bảy ");
+                    break;
+                case 8:
+                    document.write("Tám ");
+                    break;
+                case 9:
+                    document.write("Chín ");
+                    break;
+                default:
+                    document.write("Bạn nhập kí từ hoặc < 0, vui lòng nhập số (N > 0)");
+                    check = false;
+                    break;
+            }
+        } else {
+            break;
+        }
+    }
+</script>
+</body>
+</html>

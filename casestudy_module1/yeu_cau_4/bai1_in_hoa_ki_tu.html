@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In hoa kí tự</title>
+</head>
+<body>
+<script>
+    // let str = "nguyEn         TAT       thanh hOC Lop       C0522g1"
+    let str = "tRuong    TaN   HAI ";
+    let uppercaseCharacter = capitalLetter(str);
+    document.write(uppercaseCharacter + "<br>");
+
+    let stringAndCharacterLength = longString(str);
+    document.write(stringAndCharacterLength);
+
+    function capitalLetter(str) {
+        let convertToArray = str.toLowerCase().split(" ");
+        let result = convertToArray.map(replaceCharacter);
+
+        return result.join(" ");
+    }
+
+    function longString(str) {
+        let convertToArray = str.toLowerCase().split(" ");
+        let result = convertToArray.map(stringLength);
+        let max = result[0];
+        let index = 0;
+        for (let i = 1; i < result.length; i++) {
+            if (max < result[i]) {
+                max = result[i];
+                index = i;
+            }
+        }
+        return "Chuỗi có kí tự dài nhất là: " + convertToArray[index] + ", có tổng cộng " + max + " kí tự";
+    }
+
+
+    function stringLength(value) {
+        return value.length;
+    }
+
+    function replaceCharacter(value) {
+        return value.replace(value.charAt(0), value.charAt(0).toUpperCase());
+    }
+
+
+</script>
+</body>
+</html>

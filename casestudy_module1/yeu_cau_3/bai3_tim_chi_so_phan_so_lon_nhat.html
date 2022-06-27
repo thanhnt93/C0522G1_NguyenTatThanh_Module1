@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index phân số lớn nhất</title>
+</head>
+<body>
+<script>
+    let numerators = [5, 2, 5, 6];
+    let denominators = [6, 3, 4, 4];
+    let maxFraction = 0;
+    let index = 0;
+    for (let i = 0; i < numerators.length; i++) {
+        let twoDigitQuotient = numerators[i] / denominators[i];
+
+        if (maxFraction < twoDigitQuotient) {
+            maxFraction = twoDigitQuotient;
+            index = i;
+        }
+    }
+    alert(numerators[index] + "/" + denominators[index] + " là phân số lớn nhất, có chỉ số là " + index);
+</script>
+</body>
+</html>

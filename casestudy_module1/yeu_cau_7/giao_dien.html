@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Study</title>
+    <style>
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            height: 700px;
+            border: 3px solid black;
+        }
+
+        td {
+            padding: 15px;
+        }
+
+    </style>
+</head>
+<body>
+<table>
+    <tr style="background-color: #dddddd;">
+        <!--        <td></td>-->
+        <!--        <td></td>-->
+        <!--        <td></td>-->
+        <!--        <td></td>-->
+        <td style="text-align: center; background-color: darkgray" colspan="6"> A Web Page</td>
+        <!--        <td></td>-->
+    </tr>
+    <tr>
+        <td style="background-color: darkgray">
+            <button><img style="height: 30px; width: 30px;"
+                         src="https://cdn-icons-png.flaticon.com/512/93/93634.png?w=360"></button>
+        </td>
+        <td style="background-color: darkgray">
+            <button><img style="height: 30px; width: 30px" src="93634.png"></button>
+        </td>
+        <td style="background-color: darkgray">
+            <button><img style="height: 30px; width: 30px"
+                         src="https://upload.wikimedia.org/wikipedia/commons/2/25/Ps-x-button.png">
+            </button>
+        </td>
+        <td style="background-color: darkgray">
+            <button><img style="height: 30px; width: 30px"
+                         src="data:image/png;base64,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">
+            </button>
+        </td>
+        <td style="background-color: darkgray">
+            <input placeholder="http://" type="text" style="width:600px;border-radius: 30px">
+        </td>
+        <td style="background-color: darkgray">
+            <button style="border-radius: 30px">Search</button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4" style="border-top: 2px solid black">
+            <img style="height: 50px; width: 50px"
+                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqhAqjyt1b8PiGBG9pTpBYrXGIYS70SuCkIndRrbEBIMyvMA0z748d5L8y2aL9trlD1SU&usqp=CAU">
+        </td>
+        <td style="text-align: center; border-top: 2px solid black">
+            Hệ Thống Quản Lý Bài Tập Casestudy Module 1
+        </td>
+        <td style="border-top: 2px solid black"></td>
+    </tr>
+    <tr>
+        <td colspan="4" style="border-top: 1px solid black;text-align: center">
+            <select>
+                <option>Bài Tập 1</option>
+                <option>Câu A</option>
+                <option>Câu B</option>
+                <option>Câu C</option>
+                <option>Câu D</option>
+            </select>
+        </td>
+        <td colspan="2" style="border-top: 1px solid black ; border-left: 1px solid black"></td>
+    </tr>
+    <tr>
+        <td colspan="4" style="text-align: center">
+            <select>
+                <option>Bài Tập 2</option>
+                <option>Câu A</option>
+                <option>Câu B</option>
+                <option>Câu C</option>
+                <option>Câu D</option>
+            </select>
+        </td>
+        <td style="border-left: 1px solid black"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="4" style="text-align: center">
+            <select>
+                <option>Bài Tập 3</option>
+                <option>Câu A</option>
+                <option>Câu B</option>
+                <option>Câu C</option>
+                <option>Câu D</option>
+            </select>
+        </td>
+        <td style="border-left: 1px solid black"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="4" style="text-align: center">
+            <select>
+                <option>Bài Tập 4</option>
+                <option>Câu A</option>
+                <option>Câu B</option>
+                <option>Câu C</option>
+                <option>Câu D</option>
+            </select>
+        </td>
+        <td style="border-left: 1px solid black"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="4" style="text-align: center">
+            <select>
+                <option>Bài Tập 5</option>
+                <option>Câu A</option>
+                <option>Câu B</option>
+                <option>Câu C</option>
+                <option>Câu D</option>
+            </select>
+        </td>
+        <td style="border-left: 1px solid black"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="5" style="border-top: 2px solid black; background-color: darkgray"></td>
+        <td style="background-color: darkgray; text-align: right ; border-top: 2px solid black"><img
+                style="height: 40px; width: 50px"
+                src="data:image/png;base64,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">
+        </td>
+    </tr>
+</table>
+</body>
+</html>

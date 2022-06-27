@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu thức uống</title>
+</head>
+<body>
+<script>
+    while (menu !== 7) {
+        var menu = parseInt(prompt("Vui lòng chọn thức uống menu: 1.(cafe), 2.(cam vắt), 3.(nước ép cà rốt), 4.(nước ép cà chua), 5.(nước lọc), 6.(nước dừa), 7.(thoát gọi món)"));
+        let unitPrice, totalMoney;
+        switch (menu) {
+            case 1:
+                unitPrice = parseInt(prompt("Bạn đã chọn Cafe, vui lòng nhập số lượng bạn muốn mua (Đơn giá 10000VNĐ/Ly)"));
+                totalMoney = unitPrice * 10000;
+                alert("Tổng số tiền bạn trả: " + totalMoney + "VNĐ");
+                break;
+            case 2:
+                unitPrice = parseInt(prompt("Bạn đã chọn Cam Vắt, vui lòng nhập số lượng bạn muốn mua (Đơn giá 12000VNĐ/Ly)"));
+                totalMoney = unitPrice * 12000;
+                alert("Tổng số tiền bạn trả: " + totalMoney + "VNĐ");
+                break;
+            case 3:
+                unitPrice = parseInt(prompt("Bạn đã chọn nước ép cà rốt, vui lòng nhập số lượng bạn muốn mua (Đơn giá 15000VNĐ/Ly)"));
+                totalMoney = unitPrice * 15000;
+                alert("Tổng số tiền bạn trả: " + totalMoney + "VNĐ");
+                break;
+            case 4:
+                unitPrice = parseInt(prompt("Bạn đã chọn nước ép cà chua, vui lòng nhập số lượng bạn muốn mua (Đơn giá 15000VNĐ/Ly)"));
+                totalMoney = unitPrice * 15000;
+                alert("Tổng số tiền bạn trả: " + totalMoney + "VNĐ");
+                break;
+            case 5:
+                unitPrice = parseInt(prompt("Bạn đã chọn nước lọc, vui lòng nhập số lượng bạn muốn mua (Đơn giá 8000VNĐ/Ly)"));
+                totalMoney = unitPrice * 8000;
+                alert("Tổng số tiền bạn trả: " + totalMoney + "VNĐ");
+                break;
+            case 6:
+                unitPrice = parseInt(prompt("Bạn đã chọn nước dừa, vui lòng nhập số lượng bạn muốn mua (Đơn giá 20000VNĐ/Ly)"));
+                totalMoney = unitPrice * 20000;
+                alert("Tổng số tiền bạn trả: " + totalMoney + "VNĐ");
+                break;
+            case 7:
+                alert("Bạn đã không gọi món");
+                break;
+            default:
+                alert("Không nằm trong thực đơn bạn chọn");
+                break;
+        }
+    }
+</script>
+</body>
+</html>

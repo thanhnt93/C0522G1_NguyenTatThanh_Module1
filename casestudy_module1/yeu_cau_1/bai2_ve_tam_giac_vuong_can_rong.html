@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tam gác vuông cân rỗng</title>
+</head>
+<body>
+<script>
+    let chieuCao = parseInt(prompt("Nhập chiều cao: "));
+    for (let i = 1; i <= chieuCao; ++i) {
+        for (let j = 1; j <= chieuCao; ++j) {
+            if (j === i || j === 1 || i === chieuCao) {
+                document.write("*");
+            } else {
+                document.write("&nbsp&nbsp");
+            }
+            // document.write((j === i || j === 1 || i === chieuCao) ? "*" : "&nbsp&nbsp");
+        }
+        document.write("<br>");
+    }
+
+</script>
+</body>
+</html>

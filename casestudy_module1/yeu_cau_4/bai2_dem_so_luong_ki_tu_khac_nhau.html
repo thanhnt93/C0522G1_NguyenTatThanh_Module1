@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm kí tự khác nhau</title>
+</head>
+<body>
+<script>
+    let str = "nguyentatthanh";
+
+    let arrStr = Array();
+    arrStr.push(str[0]);
+
+    for (let i = 0; i < str.length; i++) {
+        let index = 0;
+        for (let j = 0; j < arrStr.length; j++) {
+            if (str[i] === arrStr[j]) {
+                index++;
+            }
+        }
+        if (index === 0) {
+            arrStr.push(str[i]);
+        }
+    }
+    document.write("Có " + arrStr.length + " kí tự khác nhau là: ")
+    for (let i = 0; i < arrStr.length; i++) {
+        document.write(arrStr[i] + " ");
+    }
+</script>
+</body>
+</html>
